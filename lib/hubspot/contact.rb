@@ -12,7 +12,6 @@ class Hubspot::Contact < Hubspot::Resource
   MERGE_PATH              = '/contacts/v1/contact/merge-vids/:id/'
   SEARCH_PATH             = '/contacts/v1/search/query'
   UPDATE_PATH             = '/contacts/v1/contact/vid/:id/profile'
-  UPDATE_PATH             = '/contacts/v1/contact/vid/:id/profile'
   BATCH_UPDATE_PATH       = '/contacts/v1/contact/batch'
 
   class << self
