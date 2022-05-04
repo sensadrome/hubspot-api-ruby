@@ -3,54 +3,32 @@ require 'hubspot/utils'
 module Hubspot
   class Meeting
     #
-    # HubSpot Deals API
+    # HubSpot Meeting API
     #
     # {https://developers.hubspot.com/docs/api/crm/meetings}
     #
-    SEARCH_MEETINGS_PATH   = "/crm/v3/objects/meetings/search"
     CREATE_MEETING_PATH    = '/crm/v3/objects/meetings'
-    MEETING_PATH           = '/crm/v3/objects/meetings/:meetingId'
-    ASSOCIATE_MEETING_PATH = 'crm/v3/objects/meetings/:meeting_id/associations/Contact/:contact_id/:object_type'
+    MEETING_PATH           = '/crm/v3/objects/meetings/:meeting_id'
+    ASSOCIATE_MEETING_PATH = '/crm/v3/objects/meetings/:meeting_id/associations/Contact/:contact_id/meeting_event_to_contact'
 
     class << self
-      def search(owner_ids, start_time_range, end_time_range, sorts, opts = {})
-        Hubspot::PagedCollection.new(opts) do |options, offset, limit|
-          request = {
-            "limit" => limit,
-            "requestOptions" => options,
-            "offset" => {
-              "isPrimary" => true
-            },
-            "filterGroups": [
-              "filters": [
-                {
-                  "values": owner_ids,
-                  "operator": "IN",
-                  "propertyName": "hubspot_owner_id"
-                },
-                {
-
-                  "value": start_time_range,
-                  "highValue": end_time_range,
-                  "propertyName": "hs_meeting_start_time",
-                  "operator": "BETWEEN"
-                }
-              ]
-            ],
-            "sorts" sorts
-          }.merge(properties_hash)
-
-          response = Hubspot::Connection.post_json(
-            SEARCH_MEETINGS_PATH,
-            params: {"properties": properties},
-            body: request
-          )
-        end
-      end
-
-      def create!(params={})
-        response = Hubspot::Connection.post_json(CREATE_MEETING_PATH, params: {}, body: params )
-        new(HashWithIndifferentAccess.new(response))
+      def create!(owner_id, meeting_title, meeting_body, start_date_time, end_date_time, external_url: '#', location: 'Remote', notes: 'Note')
+        body = {
+          properties: {
+            hs_timestamp: DateTime.now.strftime('%Q'),
+            hubspot_owner_id: owner_id,
+            hs_meeting_title: meeting_title,
+            hs_meeting_body: meeting_body,
+            hs_internal_meeting_notes: notes,
+            hs_meeting_external_url: external_url,
+            hs_meeting_location: location,
+            hs_meeting_start_time: start_date_time,
+            hs_meeting_end_time: end_date_time,
+            hs_meeting_outcome: 'SCHEDULED'
+          }
+        }
+        response = Hubspot::Connection.post_json(CREATE_MEETING_PATH, params: {}, body: body )
+        HashWithIndifferentAccess.new(response)
       end
 
       def destroy!(meeting_id)
@@ -62,19 +40,12 @@ module Hubspot
         !!@destroyed
       end
 
-      def associate!(meeting_id, object_type, object_vid)
+      def associate!(meeting_id, contact_id)
         Hubspot::Connection.put_json(ASSOCIATE_MEETING_PATH,
                                      params: {
-                                       meeting: meeting,
-                                       object_type: object_type,
-                                       object_vid: object_vid
+                                       meeting_id: meeting_id,
+                                       contact_id: contact_id
                                      })
-      end
-
-      private
-
-      def properties_hash
-        {"properties": ["hubspot_owner_id", "hs_meeting_title", "hs_meeting_start_time", "hs_meeting_end_time"]}
       end
     end
   end
