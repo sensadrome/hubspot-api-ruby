@@ -1,0 +1,74 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.hubapi.com/crm/v3/objects/meetings?hapikey=fake_api_key
+    body:
+      encoding: UTF-8
+      string: '{"properties":{"hs_timestamp":"1651676515911","hubspot_owner_id":123,"hs_meeting_title":"hs_meeting_title","hs_meeting_body":"hs_meeting_body","hs_meeting_start_time":"invalid","hs_meeting_end_time":"1651569300000","hs_meeting_outcome":"SCHEDULED"}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 400
+      message: Bad Request
+    headers:
+      Date:
+      - Wed, 04 May 2022 15:01:57 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '311'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 70621d579851409f-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - d794221a-730a-4332-9399-5a223b9efd53
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '249978'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '98'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '9'
+      X-Trace:
+      - 2B3476BE9B2C05E87889E7EC4575F419B0C99D2F7D000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lOG4PSWcKkbnWat2o15nY6oTYkCLO%2FLRXIAqBCNC1W75gZDKWmHn%2BUypSYlUPYBxivHyqwfQLVnf6tZFsAbDAxBN6Zsz3pWE7hm4AZ2q3Jj6WRNMb6VcZNPPj5Gd90eL"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: UTF-8
+      string: '{"status":"error","message":"Property values were not valid: [{\"isValid\":false,\"message\":\"invalid
+        was not a valid long. Portal 20199171, object type 0-47\",\"error\":\"INVALID_LONG\",\"name\":\"hs_meeting_start_time\"}]","correlationId":"d794221a-730a-4332-9399-5a223b9efd53","category":"VALIDATION_ERROR"}'
+  recorded_at: Wed, 04 May 2022 15:01:56 GMT
+recorded_with: VCR 6.1.0
