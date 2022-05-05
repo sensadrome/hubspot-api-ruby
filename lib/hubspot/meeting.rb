@@ -24,7 +24,7 @@ module Hubspot
             hs_meeting_outcome: 'SCHEDULED'
           }
         }
-        response = Hubspot::Connection.post_json(CREATE_MEETING_PATH, params: {}, body: body )
+        response = Hubspot::Connection.post_json(CREATE_MEETING_PATH, params: {}, body: body)
         HashWithIndifferentAccess.new(response)
       end
 
