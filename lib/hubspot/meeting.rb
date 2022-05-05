@@ -30,11 +30,6 @@ module Hubspot
 
       def destroy!(meeting_id)
         Hubspot::Connection.delete_json(MEETING_PATH, {meeting_id: meeting_id})
-        @destroyed = true
-      end
-
-      def destroyed?
-        !!@destroyed
       end
 
       def associate!(meeting_id, contact_id)
