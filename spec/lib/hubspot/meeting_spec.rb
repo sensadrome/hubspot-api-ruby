@@ -71,7 +71,7 @@ RSpec.describe Hubspot::Meeting do
                               hs_meeting_end_time)
     end
 
-    it "should be created" do
+    it "should be success" do
       VCR.use_cassette 'meeting_associate' do
         expect(Hubspot::Meeting.associate!(meeting[:id], contact.id)).to be_truthy
       end
