@@ -19,8 +19,8 @@ module Hubspot
             hubspot_owner_id: owner_id,
             hs_meeting_title: meeting_title,
             hs_meeting_body: meeting_body,
-            hs_meeting_start_time: start_date_time,
-            hs_meeting_end_time: end_date_time,
+            hs_meeting_start_time: start_date_time.is_a?(DateTime) ? start_date_time.strftime('%Q') : start_date_time,
+            hs_meeting_end_time: end_date_time.is_a?(DateTime) ? end_date_time.strftime('%Q') : end_date_time,
             hs_meeting_outcome: 'SCHEDULED'
           }
         }

@@ -2,12 +2,11 @@ RSpec.describe Hubspot::Meeting do
 
   before{ Hubspot.configure(hapikey: 'fake_api_key') }
 
-  let(:hs_timestamp) { DateTime.now.strftime('%Q') }
   let(:hubspot_owner_id) { 123 }
   let(:hs_meeting_title) { 'hs_meeting_title' }
   let(:hs_meeting_body) { 'hs_meeting_body' }
-  let(:hs_meeting_start_time) { DateTime.strptime('2022-05-03T10:00:00+01:00', '%Y-%m-%dT%H:%M:%S%z').strftime('%Q') }
-  let(:hs_meeting_end_time) { DateTime.strptime('2022-05-03T10:15:00+01:00', '%Y-%m-%dT%H:%M:%S%z').strftime('%Q') }
+  let(:hs_meeting_start_time) { DateTime.strptime('2022-05-03T10:00:00+01:00', '%Y-%m-%dT%H:%M:%S%z') }
+  let(:hs_meeting_end_time) { DateTime.strptime('2022-05-03T10:15:00+01:00', '%Y-%m-%dT%H:%M:%S%z') }
 
   describe '.create' do
     context 'with properties' do
@@ -23,7 +22,7 @@ RSpec.describe Hubspot::Meeting do
       it 'creates a new meeting with valid properties' do
         VCR.use_cassette 'meeting' do
           expect(subject[:id]).not_to be_nil
-          expect(DateTime.parse(subject[:properties][:hs_meeting_start_time]).strftime('%Q')).to eq(hs_meeting_start_time)
+          expect(DateTime.parse(subject[:properties][:hs_meeting_start_time])).to eq(hs_meeting_start_time)
         end
       end
     end
