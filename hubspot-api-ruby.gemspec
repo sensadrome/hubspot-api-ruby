@@ -10,10 +10,10 @@ Gem::Specification.new do |s|
   s.files += Dir["lib/**/*.rb"]
   s.files += Dir["lib/**/*.rake"]
   s.files += Dir["spec/**/*.rb"]
-  s.homepage = "http://github.com/lounna-sas/hubspot-api-ruby"
+  s.homepage = "https://github.com/captaincontrat/hubspot-api-ruby"
   s.summary = "hubspot-api-ruby is a wrapper for the HubSpot REST API"
   s.metadata = {
-    "changelog_uri" => "https://github.com/lounna-sas/hubspot-api-ruby/blob/master/History.md"
+    "changelog_uri" => "https://github.com/captaincontrat/hubspot-api-ruby/blob/master/History.md"
   }
 
   s.required_ruby_version = ">= 2.3"
