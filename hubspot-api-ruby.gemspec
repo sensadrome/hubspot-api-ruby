@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = "hubspot-api-ruby"
-  s.version = "0.8.1"
+  s.version = "0.9.0"
   s.require_paths = ["lib"]
   s.authors = ["Jonathan"]
   s.email = ["jonathan@hoggo.com"]

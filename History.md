@@ -1,4 +1,21 @@
-## 1.0.0 (TBD)
+## 0.9.0
+
+  * Governance update: this gem is now maintained by the team over at @captaincontrat + @Intrepidd from @ecotable
+
+  * Testing against modern ruby & activesupport versions #6
+
+  * Breaking change regarding `Hubspot::Association`, for example :
+
+    before :
+    `Hubspot::Association.batch_create([{ from_id: 1, to_id: 2, definition_id: Hubspot::Association::COMPANY_TO_CONTACT }])`
+
+    now: `Hubspot::Association.batch_create("Company", "Contact", [{from_id: 1, to_id: 2}]])` #6
+
+  * Removed unsupported Hubspot::`ContactList#refresh` method #6
+
+  * Added `Hubspot::NotFoundError` which inherits from `NotFoundError` and that is raised when the error code is 404 for finer exception handling
+
+## Up until 0.8.1 (December 31, 2019)
 
 * [#168] `Hubspot.configure` will raise when given none or multiple ways to
   authenticate with the HubSpot API.
@@ -12,6 +29,8 @@
 
 * [#166] Updates the endpoints referenced in `ContactProperties` to match the new
   HubSpot ContactProperty endpoints.
+
+* Other history entries have not been logged
 
 [#166]: https://github.com/adimichele/hubspot-ruby/pull/166
 
