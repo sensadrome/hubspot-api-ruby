@@ -1,10 +1,16 @@
 # HubSpot REST API wrappers for ruby
 
-**This is the master branch and contains unreleased and potentially breaking changes. If you are looking for the most recent stable release you want the [v0-stable branch](https://github.com/adimichele/hubspot-ruby/tree/v0-stable).**
-
 Wraps the HubSpot REST API for convenient access from ruby applications.
 
 Documentation for the HubSpot REST API can be found here: https://developers.hubspot.com/docs/endpoints
+
+## Disclaimer
+
+This gem is a fork of the unofficial [hubspot-ruby](https://github.com/HubspotCommunity/hubspot-ruby) gem which is unfortunately not maintained anymore.
+
+The API has evolved quite a bit and while this is not a drop-in replacement you should feel familiar if you come from `hubspot-ruby`.
+
+This project and the code therein was not created by and is not supported by HubSpot, Inc or any of its affiliates.
 
 ## Setup
 
@@ -141,15 +147,17 @@ By default, the VCR recording mode is set to `:none`, which allows recorded
 requests to be re-played but raises for any new request. This prevents the test
 suite from issuing unexpected HTTP requests.
 
-To add a new test or update a VCR recording, run the test with the `VCR_RECORD`
-environment variable:
+Some requests require to be done on a live hubspot portal, you can set the `HUBSPOT_HAPI_KEY` environement variable, for example inside a `.env.test` file :
+
+```
+HUBSPOT_HAPI_KEY=xxxx
+```
+
+To add a new test or update a VCR recording, run the test with the `VCR_RECORD_MODE`
+environment variable, for instance:
 
 ```sh
-VCR_RECORD=1 bundle exec rspec spec
+VCR_RECORD_MODE=new_episodes bundle exec rspec spec
 ```
 
 [VCR]: https://github.com/vcr/vcr
-
-## Disclaimer
-
-This project and the code therein was not created by and is not supported by HubSpot, Inc or any of its affiliates.
