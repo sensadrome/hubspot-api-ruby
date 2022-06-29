@@ -2,106 +2,148 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/deals/v1/pipelines?hapikey=demo
+    uri: https://api.hubapi.com/deals/v1/pipelines?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"label":"New Pipeline"}'
+      string: '{"label":"New Pipeline 801e2c9f41ea734d1700c2931000f5a9"}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Thu, 15 Nov 2018 21:05:45 GMT
+      - Wed, 22 Jun 2022 08:49:24 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '352'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d3db1facf506b5fea11d58eb1e27e028e1542315945; expires=Fri, 15-Nov-19
-        21:05:45 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2BED74F16DF3CA6CF4D059738CC9529A0618BABF38000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '160000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '113817'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '58'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71f3bafe3e673b3d-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Api-Deprecated:
+      - 'This endpoint is deprecated. See more details here: https://developers.hubspot.com/docs/faq/deprecated-apis'
+      X-Hubspot-Correlation-Id:
+      - 03aa6da2-eb22-4bd0-8489-f2f632996a1a
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498359'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '133'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '13'
+      X-Trace:
+      - 2BEB7C703FBBDEA25C1213EC0E3FE540F2538B726E000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NqOyyjebqOYimnOE%2FyDbhXb6gKEOziCQ6yMkiONdvM8fnCmnBqX28VduyF410CxsrE0DlPqHXeVf6rG4fmjKgHyB23nZHEsYEJUNBSr7Nd0toEWDWICud%2F9sZogbbynr9AXMj9c%2BOH8gmokR"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 47a4ad849e9e5a32-BOS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"pipelineId":"e878f589-61fe-4e4e-acd1-44a4357b957b","stages":[{"stageId":"137786","label":"Appointment
-        Scheduled","probability":0.2,"active":true,"displayOrder":0,"closedWon":false},{"stageId":"137787","label":"Qualified
-        To Buy","probability":0.4,"active":true,"displayOrder":1,"closedWon":false},{"stageId":"137788","label":"Presentation
-        Scheduled","probability":0.6,"active":true,"displayOrder":2,"closedWon":false},{"stageId":"137789","label":"Decision
-        Maker Bought-In","probability":0.8,"active":true,"displayOrder":3,"closedWon":false},{"stageId":"137790","label":"Contract
-        Sent","probability":0.9,"active":true,"displayOrder":4,"closedWon":false},{"stageId":"137791","label":"Closed
-        Won","probability":1.0,"active":true,"displayOrder":5,"closedWon":true},{"stageId":"137792","label":"Closed
+      encoding: ASCII-8BIT
+      string: '{"pipelineId":"a4e29501-a8c5-4e29-9d40-ee285be48ed4","stages":[{"stageId":"26544539","label":"Appointment
+        Scheduled","probability":0.2,"active":true,"displayOrder":0,"closedWon":false},{"stageId":"26544540","label":"Qualified
+        To Buy","probability":0.4,"active":true,"displayOrder":1,"closedWon":false},{"stageId":"26544541","label":"Presentation
+        Scheduled","probability":0.6,"active":true,"displayOrder":2,"closedWon":false},{"stageId":"26544542","label":"Decision
+        Maker Bought-In","probability":0.8,"active":true,"displayOrder":3,"closedWon":false},{"stageId":"26544543","label":"Contract
+        Sent","probability":0.9,"active":true,"displayOrder":4,"closedWon":false},{"stageId":"26544544","label":"Closed
+        Won","probability":1.0,"active":true,"displayOrder":5,"closedWon":true},{"stageId":"26544545","label":"Closed
         Lost","probability":0.0,"active":true,"displayOrder":6,"closedWon":false}],"label":"New
-        Pipeline","active":true,"displayOrder":0,"staticDefault":false}'
-    http_version: 
-  recorded_at: Thu, 15 Nov 2018 21:05:45 GMT
+        Pipeline 801e2c9f41ea734d1700c2931000f5a9","active":true,"displayOrder":0,"staticDefault":false}'
+  recorded_at: Wed, 22 Jun 2022 08:49:24 GMT
 - request:
     method: delete
-    uri: https://api.hubapi.com/deals/v1/pipelines/e878f589-61fe-4e4e-acd1-44a4357b957b?hapikey=demo
+    uri: https://api.hubapi.com/deals/v1/pipelines/a4e29501-a8c5-4e29-9d40-ee285be48ed4?hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 204
       message: No Content
     headers:
       Date:
-      - Thu, 15 Nov 2018 21:05:46 GMT
-      Content-Type:
-      - application/json;charset=utf-8
+      - Wed, 22 Jun 2022 08:49:24 GMT
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d9d4948b89fab5d15167c95ded65126471542315945; expires=Fri, 15-Nov-19
-        21:05:45 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B3036CB498292196BBB724005C67EAC0E85869243000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '160000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '113816'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '57'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71f3baffdeed4075-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Api-Deprecated:
+      - 'This endpoint is deprecated. See more details here: https://developers.hubspot.com/docs/faq/deprecated-apis'
+      X-Hubspot-Correlation-Id:
+      - 2454ff93-a71c-4bdd-a96e-bc4eeee0fa25
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498358'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '132'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '13'
+      X-Trace:
+      - 2BFEE2C4DF72ABA211BE30A36A891B022E883325CF000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=WYyCcla8xkwFXSiXlM3xx79%2BaRUyeQ3VEKaOzH89pdromEIz%2BFyTVK2QSIebj5PCQnk2nUZdTt7YfWC%2BDsyhu0duXTv0sVXZMbZ80danekzfRhB%2FAIv5Nm74sMbnFZZlZwIMFH3l9Yi8W7G5"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Vary:
+      - Accept-Encoding
       Server:
       - cloudflare
-      Cf-Ray:
-      - 47a4ad85fb61ae32-BOS
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: UTF-8
       string: ''
-    http_version: 
-  recorded_at: Thu, 15 Nov 2018 21:05:46 GMT
-recorded_with: VCR 4.0.0
+  recorded_at: Wed, 22 Jun 2022 08:49:24 GMT
+recorded_with: VCR 6.1.0

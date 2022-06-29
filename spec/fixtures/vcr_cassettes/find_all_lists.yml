@@ -2,137 +2,299 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists?hapikey=demo
+    uri: https://api.hubapi.com/contacts/v1/lists?hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Fri, 20 Feb 2015 20:17:59 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
-      Content-Length:
-      - '7358'
+      - Wed, 22 Jun 2022 08:48:52 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71f3ba33584e99df-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 608c4f79-1047-42e3-8bce-710197838175
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498462'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '128'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BCB9703C5E37A18747A72FE8C946825FC7ECA9CDC000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=axvbhdlblB8%2BQ9dyYrZW9aPP1K0p9V8KldFIKhTnwIcPAWHuto1CXplr%2FwYFCVFMhblyTerowQ3zEXUJCCDhXo2hm2qMYRb8MBso%2FBRN%2FbKc7MVKDgdEIwwic%2BPTFTLBMKh%2BEYZMhL%2BQMqoA"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"lists":[{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1335448864306,"error":"","lastSizeChangeAt":1424402567742,"size":3355},"dynamic":true,"listType":"DYNAMIC","listId":1,"filters":[[{"operator":"IS_NOT_EMPTY","withinTimeMode":"PAST","property":"twitterhandle"}]],"portalId":62515,"createdAt":1335448813688,"updatedAt":1335448813688,"internalListId":1,"name":"twitterers"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1336673990262,"error":"","lastSizeChangeAt":1418738702960,"size":4},"dynamic":false,"listId":2,"filters":[[{"operator":"IS_NOT_EMPTY","withinTimeMode":"PAST","property":"twitterhandle"}]],"portalId":62515,"createdAt":1336673951299,"updatedAt":1336673951299,"internalListId":2,"name":"HubSpot-HootSuite
-        App"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1344891893390,"error":"","lastSizeChangeAt":1422468593853,"size":5},"dynamic":false,"listType":"STATIC","listId":3,"filters":[],"portalId":62515,"createdAt":1344891893390,"updatedAt":1344891893390,"internalListId":5,"name":"staticTest"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1345057450679,"error":"","lastSizeChangeAt":1421930685051,"size":2},"dynamic":false,"listType":"STATIC","listId":4,"filters":[],"portalId":62515,"createdAt":1345057450679,"updatedAt":1345057450679,"internalListId":6,"name":"Workface
-        Leads"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1352457865767,"error":"","lastSizeChangeAt":1356047577025,"size":0},"dynamic":true,"listType":"DYNAMIC","listId":5,"filters":[[{"type":"string","operator":"EQ","withinTimeMode":"PAST","property":"email","value":"venky10596@gmail.com"}]],"portalId":62515,"createdAt":1345150315056,"updatedAt":1352457795448,"internalListId":111,"name":"stuff"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1412965644048,"error":"","lastSizeChangeAt":1412965644007,"size":1134},"dynamic":false,"listType":"STATIC","deleted":false,"listId":106,"filters":[],"portalId":62515,"createdAt":1348730165681,"updatedAt":1348730165681,"internalListId":108,"name":"test1.csv"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1353112579422,"error":"","lastSizeChangeAt":1379278698150,"size":0},"dynamic":true,"listType":"DYNAMIC","listId":123,"filters":[[{"type":"enumeration","operator":"SET_EQ","withinTimeMode":"PAST","property":"created_from_learning_studio","value":"true"}]],"portalId":62515,"createdAt":1353112478149,"updatedAt":1353448496108,"internalListId":128,"name":"VP
-        From LS"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1353435356844,"error":"","lastSizeChangeAt":1379278698143,"size":0},"dynamic":true,"listType":"DYNAMIC","listId":124,"filters":[[{"type":"enumeration","operator":"SET_EQ","withinTimeMode":"PAST","property":"created_from_learning_studio","value":"true"},{"operator":"IS_EMPTY","withinTimeMode":"PAST","property":"system_generated_password"}]],"portalId":62515,"createdAt":1353435268894,"updatedAt":1353435268894,"internalListId":129,"name":"VP
-        Self Signed Up"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1353448911950,"error":"","lastSizeChangeAt":1379278604544,"size":0},"dynamic":true,"listType":"DYNAMIC","listId":125,"filters":[[{"type":"enumeration","operator":"SET_EQ","withinTimeMode":"PAST","property":"created_from_learning_studio","value":"true"},{"operator":"IS_NOT_EMPTY","withinTimeMode":"PAST","property":"system_generated_password"}]],"portalId":62515,"createdAt":1353435309254,"updatedAt":1353448679894,"internalListId":137,"name":"VP
-        User Created By Admin"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1354183186104,"error":"","lastSizeChangeAt":1379278698138,"size":0},"dynamic":true,"listType":"DYNAMIC","listId":126,"filters":[[{"type":"enumeration","operator":"SET_EQ","withinTimeMode":"PAST","property":"test_user","value":"true"}]],"portalId":62515,"createdAt":1353445432440,"updatedAt":1353445432440,"internalListId":141,"name":"VP
-        Test Users"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1353956891525,"error":"","lastSizeChangeAt":1379278879425,"size":0},"dynamic":false,"listType":"STATIC","listId":127,"filters":[],"portalId":62515,"createdAt":1353956891525,"updatedAt":1353956891525,"internalListId":139,"name":"Enter
-        Photo Contest"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1354047260466,"error":"","lastSizeChangeAt":1379278348398,"size":0},"dynamic":false,"listType":"STATIC","listId":128,"filters":[],"portalId":62515,"createdAt":1354047260466,"updatedAt":1354047260466,"internalListId":140,"name":"Win
-        Golf Stand Bag"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1358762885859,"error":"","lastSizeChangeAt":1358762885860,"size":0},"dynamic":true,"listType":"DYNAMIC","listId":132,"filters":[[{"operator":"HAS_FILLED_OUT_FORM","form":"c900bc7334de4ec7921d688c5444e445","withinTimeMode":"PAST"},{"operator":"IS_NOT_EMPTY","withinTimeMode":"PAST","property":"country"}]],"portalId":62515,"createdAt":1358415795285,"updatedAt":1358762858893,"internalListId":154,"name":"US
-        Person"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1379965841604,"error":"","lastSizeChangeAt":1422554891450,"size":27},"dynamic":true,"listType":"DYNAMIC","listId":137,"filters":[[{"type":"number","operator":"IS_NOT_EMPTY","withinTimeMode":"PAST","property":"annualrevenue","value":0}]],"portalId":62515,"createdAt":1358866329333,"updatedAt":1379965836651,"deleteable":true,"internalListId":273,"name":"Klpz"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1360391773728,"error":"","lastSizeChangeAt":1409867632129,"size":0},"dynamic":false,"listType":"STATIC","listId":140,"filters":[],"portalId":62515,"createdAt":1360391773728,"updatedAt":1360391773728,"internalListId":158,"name":"pooja.arora@utsavfashion.biz"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1360714782028,"error":"","lastSizeChangeAt":1416868964666,"size":25},"dynamic":false,"listType":"STATIC","listId":145,"filters":[],"portalId":62515,"createdAt":1360714782028,"updatedAt":1360714782028,"internalListId":163,"name":"tweeters"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1360714845104,"error":"","lastSizeChangeAt":0,"size":0},"dynamic":false,"listType":"STATIC","listId":146,"filters":[],"portalId":62515,"createdAt":1360714845104,"updatedAt":1360714845104,"internalListId":164,"name":"tweeters2"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1360714853388,"error":"","lastSizeChangeAt":1399965262559,"size":2},"dynamic":false,"listType":"STATIC","listId":147,"filters":[],"portalId":62515,"createdAt":1360714853388,"updatedAt":1360714853388,"internalListId":165,"name":"tweeters3"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1360715752360,"error":"","lastSizeChangeAt":0,"size":0},"dynamic":false,"listType":"STATIC","listId":148,"filters":[],"portalId":62515,"createdAt":1360715752360,"updatedAt":1360715752360,"internalListId":166,"name":"tweetersasdf"},{"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1360718454238,"error":"","lastSizeChangeAt":0,"size":0},"dynamic":false,"listType":"STATIC","listId":149,"filters":[],"portalId":62515,"createdAt":1360718454238,"updatedAt":1360718454238,"internalListId":167,"name":"tweeterszzzzz"}],"offset":20,"has-more":true}'
-    http_version: 
-  recorded_at: Fri, 20 Feb 2015 20:17:59 GMT
+      encoding: ASCII-8BIT
+      string: '{"offset":20,"lists":[{"portalId":<PORTAL_ID>,"listId":1,"internalListId":1,"createdAt":1655459025454,"updatedAt":1655459025454,"name":"testing
+        list","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655459025705,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":2,"internalListId":2,"createdAt":1655459026679,"updatedAt":1655459026679,"name":"list
+        with filters","listType":"STATIC","filters":[[{"withinTimeMode":"PAST","operator":"EQ","filterFamily":"PropertyValue","type":"string","property":"twitterhandle","value":"@hubspot"}]],"metaData":{"size":0,"lastSizeChangeAt":1655459046673,"processing":"DONE","lastProcessingStateChangeAt":1655459046622,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":4,"internalListId":4,"createdAt":1655459032088,"updatedAt":1655459032088,"name":"my-contacts-list","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":1655459034364,"processing":"DONE","lastProcessingStateChangeAt":1655459032259,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":5,"internalListId":5,"createdAt":1655459034857,"updatedAt":1655459034857,"name":"update
+        list name","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655459035019,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":10,"internalListId":10,"createdAt":1655459189287,"updatedAt":1655459189287,"name":"update
+        list name eb0bbd5ace3e33e5c30b6a8640999411","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655459189519,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":11,"internalListId":11,"createdAt":1655469470271,"updatedAt":1655469470271,"name":"testing
+        list 252af35440f2518d63f33738230dec45","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655469470498,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":12,"internalListId":12,"createdAt":1655469470837,"updatedAt":1655469470837,"name":"testing
+        list bdddb4cd2a8adbb0c3873608f47d244d","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655469471025,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":13,"internalListId":13,"createdAt":1655469471270,"updatedAt":1655469471270,"name":"testing
+        list 1271819bc6aba3c4c7f9238b058ae1d7","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655469471461,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":14,"internalListId":14,"createdAt":1655469471705,"updatedAt":1655469471705,"name":"testing
+        list d606c9abaecb64337710c964cf35e517","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655469471912,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":15,"internalListId":15,"createdAt":1655469478085,"updatedAt":1655469478085,"name":"update
+        list name d1b0be226a0f52e77f055960b5e9e717","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655469478364,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":16,"internalListId":16,"createdAt":1655469478776,"updatedAt":1655469478776,"name":"update
+        list name 5a429abf8260df106069d572a54e6818","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655469478946,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":19,"internalListId":19,"createdAt":1655469811755,"updatedAt":1655469811755,"name":"testing
+        list 1a8e2470d1c7dd5f872a2eca5509babd","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655469811955,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":20,"internalListId":20,"createdAt":1655469812224,"updatedAt":1655469812224,"name":"testing
+        list 4e27f0badf4ff5112d92c1420281d88a","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655469812446,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":21,"internalListId":21,"createdAt":1655469812708,"updatedAt":1655469812708,"name":"testing
+        list 86e093b098bbe164bc612b02c6cf826b","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655469812918,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":22,"internalListId":22,"createdAt":1655469813185,"updatedAt":1655469813185,"name":"testing
+        list cd9ab40bdb00bfd6adf15d9dd7b9a657","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655469813349,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":25,"internalListId":25,"createdAt":1655470193559,"updatedAt":1655470193559,"name":"contacts
+        list 26ab16496df7897be4a2cadc7ef9049f","listType":"STATIC","filters":[],"metaData":{"size":25,"lastSizeChangeAt":1655470210102,"processing":"DONE","lastProcessingStateChangeAt":1655470193748,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":26,"internalListId":26,"createdAt":1655470210756,"updatedAt":1655470210756,"name":"contacts
+        list fa1e81a217865424ca3e2e44f36554e2","listType":"STATIC","filters":[],"metaData":{"size":25,"lastSizeChangeAt":1655470227528,"processing":"DONE","lastProcessingStateChangeAt":1655470211024,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":27,"internalListId":27,"createdAt":1655470228082,"updatedAt":1655470228082,"name":"contacts
+        list 61f9730c12596bf4e6daafe310292786","listType":"STATIC","filters":[],"metaData":{"size":25,"lastSizeChangeAt":1655470243776,"processing":"DONE","lastProcessingStateChangeAt":1655470228287,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":28,"internalListId":28,"createdAt":1655470244227,"updatedAt":1655470244227,"name":"contacts
+        list fc4768353e088411d06a754570cc23e7","listType":"STATIC","filters":[],"metaData":{"size":5,"lastSizeChangeAt":1655470247880,"processing":"DONE","lastProcessingStateChangeAt":1655470244452,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":29,"internalListId":29,"createdAt":1655470296840,"updatedAt":1655470296840,"name":"contacts
+        list 64402bf5e107032de10c5533f38d4c03","listType":"STATIC","filters":[],"metaData":{"size":25,"lastSizeChangeAt":1655470313537,"processing":"DONE","lastProcessingStateChangeAt":1655470297047,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false}],"has-more":true}'
+  recorded_at: Wed, 22 Jun 2022 08:48:51 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists?count=2&hapikey=demo
+    uri: https://api.hubapi.com/contacts/v1/lists?count=2&hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Wed, 25 Feb 2015 17:47:27 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Wed, 22 Jun 2022 08:48:52 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '849'
+      - '324'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71f3ba355e6139bd-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 86d15f84-8f46-4fb2-b4ec-4746e5d2b93c
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498461'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '129'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BE9618752BDBCD36E2E8813C86E421B6F5CE39B9D000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=R2mgCP6Eahn8k6M%2BETFxoocQ%2BeZgRh4bsFU1VkrkeEQJ8D8Zd9nU1L1uapwqC4sIQys00PXYGxcbfco%2BkRaM2UIxoWuA9rTygAo0RaE6vnZn9YLhWnm4maZEYyljj%2Fby%2B7CIWOJWK%2BXKT7Lv"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"lists":[{"dynamic":true,"metaData":{"lastProcessingStateChangeAt":1424576267785,"lastSizeChangeAt":1424834705600,"error":"","processing":"DONE","size":3363},"listType":"DYNAMIC","updatedAt":1424575262863,"filters":[[{"type":"string","operator":"IS_NOT_EMPTY","filterFamily":"PropertyValue","withinTimeMode":"PAST","property":"twitterhandle"}]],"listId":1,"portalId":62515,"createdAt":1335448813688,"internalListId":97398,"name":"update
-        list name"},{"dynamic":false,"metaData":{"lastProcessingStateChangeAt":1336673990262,"lastSizeChangeAt":1424559295352,"error":"","processing":"DONE","size":0},"updatedAt":1336673951299,"filters":[[{"operator":"IS_NOT_EMPTY","withinTimeMode":"PAST","property":"twitterhandle"}]],"listId":2,"portalId":62515,"createdAt":1336673951299,"internalListId":2,"name":"HubSpot-HootSuite
-        App"}],"offset":2,"has-more":true}'
-    http_version: 
-  recorded_at: Wed, 25 Feb 2015 17:47:26 GMT
+      encoding: ASCII-8BIT
+      string: '{"offset":2,"lists":[{"portalId":<PORTAL_ID>,"listId":4,"internalListId":4,"createdAt":1655459032088,"updatedAt":1655459032088,"name":"my-contacts-list","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":1655459034364,"processing":"DONE","lastProcessingStateChangeAt":1655459032259,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":1,"internalListId":1,"createdAt":1655459025454,"updatedAt":1655459025454,"name":"testing
+        list","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655459025705,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false}],"has-more":true}'
+  recorded_at: Wed, 22 Jun 2022 08:48:52 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists?count=4&hapikey=demo
+    uri: https://api.hubapi.com/contacts/v1/lists?count=4&hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Wed, 25 Feb 2015 17:49:50 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Wed, 22 Jun 2022 08:48:52 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '1453'
+      - '488'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71f3ba369c1299ba-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 7d0df665-ba21-4c11-bc8c-52509a0bae54
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498460'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '128'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BEA9188F3B3A8EBF1173D523F84906E90497FDBE3000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Ylbb6RxdN%2FEceqQgBbkJ8hF9N42Bzxabh13l2ojlByYLLWPLcyt5B10FLt0mTpiJE6RUOKI%2BV%2FY9QaCiZ3VQR2thN6eh4SBiNZkwgWKiu0gHPgcwpkZuHxXxtYFE38Ax27iV30BO5nrbdqcP"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"lists":[{"dynamic":true,"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1424576267785,"lastSizeChangeAt":1424834705600,"error":"","size":3363},"createdAt":1335448813688,"portalId":62515,"listId":1,"listType":"DYNAMIC","updatedAt":1424575262863,"filters":[[{"type":"string","operator":"IS_NOT_EMPTY","filterFamily":"PropertyValue","withinTimeMode":"PAST","property":"twitterhandle"}]],"internalListId":97398,"name":"update
-        list name"},{"dynamic":false,"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1336673990262,"lastSizeChangeAt":1424559295352,"error":"","size":0},"createdAt":1336673951299,"portalId":62515,"listId":2,"updatedAt":1336673951299,"filters":[[{"operator":"IS_NOT_EMPTY","withinTimeMode":"PAST","property":"twitterhandle"}]],"internalListId":2,"name":"HubSpot-HootSuite
-        App"},{"dynamic":false,"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1344891893390,"lastSizeChangeAt":1424561579485,"error":"","size":0},"createdAt":1344891893390,"portalId":62515,"listId":3,"listType":"STATIC","updatedAt":1344891893390,"filters":[],"internalListId":5,"name":"staticTest"},{"dynamic":false,"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1345057450679,"lastSizeChangeAt":1424562780944,"error":"","size":0},"createdAt":1345057450679,"portalId":62515,"listId":4,"listType":"STATIC","updatedAt":1424574658753,"filters":[],"internalListId":6,"name":"Workface
-        Leads"}],"offset":4,"has-more":true}'
-    http_version: 
-  recorded_at: Wed, 25 Feb 2015 17:49:49 GMT
+      encoding: ASCII-8BIT
+      string: '{"offset":4,"lists":[{"portalId":<PORTAL_ID>,"listId":1,"internalListId":1,"createdAt":1655459025454,"updatedAt":1655459025454,"name":"testing
+        list","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655459025705,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":2,"internalListId":2,"createdAt":1655459026679,"updatedAt":1655459026679,"name":"list
+        with filters","listType":"STATIC","filters":[[{"operator":"EQ","filterFamily":"PropertyValue","withinTimeMode":"PAST","type":"string","property":"twitterhandle","value":"@hubspot"}]],"metaData":{"size":0,"lastSizeChangeAt":1655459046673,"processing":"DONE","lastProcessingStateChangeAt":1655459046622,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":4,"internalListId":4,"createdAt":1655459032088,"updatedAt":1655459032088,"name":"my-contacts-list","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":1655459034364,"processing":"DONE","lastProcessingStateChangeAt":1655459032259,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":5,"internalListId":5,"createdAt":1655459034857,"updatedAt":1655459034857,"name":"update
+        list name","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655459035019,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false}],"has-more":true}'
+  recorded_at: Wed, 22 Jun 2022 08:48:52 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists?count=2&hapikey=demo&offset=2
+    uri: https://api.hubapi.com/contacts/v1/lists?count=2&hapikey=<HAPI_KEY>&offset=2
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Wed, 25 Feb 2015 17:52:40 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Wed, 22 Jun 2022 08:48:52 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '642'
+      - '406'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71f3ba386fc8088b-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 8228aa55-8c75-46b1-9f1d-49ad97232ab1
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498459'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '127'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BD05D2AD263F7A43FF8788902331736789FA0A080000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Od48MH0iAL3ZJ1wkZN0NoX8uWJGiF9NLHA2nw%2BCOtIby44q0ZnFGFVJwLFmYV9mhrRFTe9mSXbf0yQy7rRbip9exs1ts%2FJZppigOMqeuCaNBWlVDu4tu4EnU2S3SYORHjAWcDVGukbcY3ArI"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"lists":[{"dynamic":false,"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1344891893390,"error":"","lastSizeChangeAt":1424561579485,"size":0},"listType":"STATIC","updatedAt":1344891893390,"filters":[],"portalId":62515,"createdAt":1344891893390,"listId":3,"internalListId":5,"name":"staticTest"},{"dynamic":false,"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1345057450679,"error":"","lastSizeChangeAt":1424562780944,"size":0},"listType":"STATIC","updatedAt":1424574658753,"filters":[],"portalId":62515,"createdAt":1345057450679,"listId":4,"internalListId":6,"name":"Workface
-        Leads"}],"offset":4,"has-more":true}'
-    http_version: 
-  recorded_at: Wed, 25 Feb 2015 17:52:39 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '{"offset":4,"lists":[{"portalId":<PORTAL_ID>,"listId":5,"internalListId":5,"createdAt":1655459034857,"updatedAt":1655459034857,"name":"update
+        list name","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655459035019,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false},{"portalId":<PORTAL_ID>,"listId":2,"internalListId":2,"createdAt":1655459026679,"updatedAt":1655459026679,"name":"list
+        with filters","listType":"STATIC","filters":[[{"withinTimeMode":"PAST","operator":"EQ","filterFamily":"PropertyValue","type":"string","property":"twitterhandle","value":"@hubspot"}]],"metaData":{"size":0,"lastSizeChangeAt":1655459046673,"processing":"DONE","lastProcessingStateChangeAt":1655459046622,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false}],"has-more":true}'
+  recorded_at: Wed, 22 Jun 2022 08:48:52 GMT
+recorded_with: VCR 6.1.0

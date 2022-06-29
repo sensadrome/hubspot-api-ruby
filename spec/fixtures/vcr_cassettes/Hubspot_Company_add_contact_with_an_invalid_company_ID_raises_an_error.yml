@@ -1,64 +1,74 @@
 ---
 http_interactions:
 - request:
-    method: put
-    uri: https://api.hubapi.com/crm-associations/v1/associations/create-batch?hapikey=demo
+    method: post
+    uri: https://api.hubapi.com/crm/v4/associations/Company/Contact/batch/create?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '[{"fromObjectId":1,"toObjectId":1,"category":"HUBSPOT_DEFINED","definitionId":2}]'
+      string: '{"inputs":[{"from":{"id":1},"to":{"id":1},"types":[{"associationCategory":"HUBSPOT_DEFINED","associationTypeId":2}]}]}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
-      code: 400
-      message: Bad Request
+      code: 207
+      message: Multi-Status
     headers:
       Date:
-      - Wed, 20 Nov 2019 17:05:12 GMT
+      - Wed, 22 Jun 2022 08:47:50 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '209'
+      - '223'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=redacted; expires=Fri, 20-Dec-19
-        17:05:12 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - redacted
-      X-Hubspot-Ratelimit-Daily:
-      - '250000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '249628'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Remaining:
-      - '89'
-      X-Hubspot-Ratelimit-Max:
-      - '100'
-      X-Hubspot-Ratelimit-Secondly:
-      - '10'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '8'
-      Vary:
-      - Accept-Encoding
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Cf-Cache-Status:
-      - DYNAMIC
+      Cf-Ray:
+      - 71f3b8b39ff999f7-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - ae8dad93-d910-4457-a7eb-855ac2667f4c
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498583'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '109'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '10'
+      X-Trace:
+      - 2B944EE00B21DF8492723DC81482A5617C6671414A000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=5Vtp05%2FgP3S65H11C24YVeY%2FZZoA7cVptU8daFz%2BphNl7G0d1bLCb0LZPJSZfvAKbZUWLPBkJtZBsW8W1VmPj4sAOPDhCJ9igCEgtINBonzRiS3S9ngNn9Is3atM2NXze%2BVlNIxHmO2H1Z6N"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 538c01e52928cdab-CDG
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: UTF-8
-      string: '{"status":"error","message":"One or more associations are invalid","correlationId":"47a734e3-78b1-44f8-916d-6f3f1116cfab","errors":["COMPANY=1
-        is not valid"],"requestId":"e50ae34b-8dfe-4948-a74e-1c1e92685ede"}'
-    http_version:
-  recorded_at: Wed, 20 Nov 2019 17:05:12 GMT
-recorded_with: VCR 5.0.0
+      string: '{"status":"COMPLETE","results":[],"numErrors":1,"errors":[{"status":"error","category":"VALIDATION_ERROR","message":"COMPANY=1
+        is not valid"}],"startedAt":"2022-06-22T08:47:50.416Z","completedAt":"2022-06-22T08:47:50.429Z"}'
+  recorded_at: Wed, 22 Jun 2022 08:47:50 GMT
+recorded_with: VCR 6.1.0

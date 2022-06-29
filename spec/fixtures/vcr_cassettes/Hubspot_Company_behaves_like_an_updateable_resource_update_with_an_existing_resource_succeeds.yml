@@ -5,99 +5,142 @@ http_interactions:
     uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Leuschke-Watsica"},{"name":"domain","value":"hauck.io"}]}'
+      string: '{"properties":[{"name":"name","value":"O''Keefe Inc"},{"name":"domain","value":"bosco.io"}]}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:51 GMT
+      - Wed, 22 Jun 2022 08:47:38 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '392'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=da52deca62846b3190d3e5d16cf70dfad1556981031; expires=Sun, 03-May-20
-        14:43:51 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B871D90252309CC737785E093EDE77D673FD6AEB9000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979557'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '58'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71f3b86ab9863bda-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 0a7bb705-bc4b-41a5-a28f-8a9ab35eeef5
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498634'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '112'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '11'
+      X-Trace:
+      - 2B66AEBD91E41FDD401943F01351DEB7A956C6A285000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=oYykV7BQcQ6eGTUI74wNHAL%2FvvVznmLsjDEXwqkpj4E%2Fi3VKXEzTibJy5Mx8SlpMRAR4a5zH6rSoGVDVak0X8hI%2FCtwZP7wlEdHrwtyi0qNaAo57sU26acTGIsKqc3eAAcWF%2FDDk0gdIlEI9"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3fd80946cf54-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897466915,"isDeleted":false,"properties":{"website":{"value":"hauck.io","timestamp":1556981031717,"source":"CALCULATED","sourceId":null,"versions":[{"name":"website","value":"hauck.io","timestamp":1556981031717,"source":"CALCULATED","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]},"hs_lastmodifieddate":{"value":"1556981031717","timestamp":1556981031717,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981031717","timestamp":1556981031717,"source":"CALCULATED","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]},"domain":{"value":"hauck.io","timestamp":1556981031717,"source":"API","sourceId":null,"versions":[{"name":"domain","value":"hauck.io","timestamp":1556981031717,"source":"API","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]},"name":{"value":"Leuschke-Watsica","timestamp":1556981031717,"source":"API","sourceId":null,"versions":[{"name":"name","value":"Leuschke-Watsica","timestamp":1556981031717,"source":"API","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]},"createdate":{"value":"1556981031717","timestamp":1556981031717,"source":"API","sourceId":null,"versions":[{"name":"createdate","value":"1556981031717","timestamp":1556981031717,"source":"API","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"},{"name":"createdate","value":"1556981031717","timestamp":1556981031717,"sourceId":"API","source":"API","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:51 GMT
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8963401599,"isDeleted":false,"properties":{"website":{"value":"bosco.io","timestamp":1655887658801,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"bosco.io","timestamp":1655887658801,"source":"CALCULATED","sourceVid":[],"requestId":"0a7bb705-bc4b-41a5-a28f-8a9ab35eeef5"}]},"hs_lastmodifieddate":{"value":"1655887658801","timestamp":1655887658801,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655887658801","timestamp":1655887658801,"source":"CALCULATED","sourceVid":[],"requestId":"0a7bb705-bc4b-41a5-a28f-8a9ab35eeef5"}]},"domain":{"value":"bosco.io","timestamp":1655887658801,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"domain","value":"bosco.io","timestamp":1655887658801,"source":"API","sourceVid":[],"requestId":"0a7bb705-bc4b-41a5-a28f-8a9ab35eeef5"}]},"name":{"value":"O''Keefe
+        Inc","timestamp":1655887658801,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"O''Keefe
+        Inc","timestamp":1655887658801,"source":"API","sourceVid":[],"requestId":"0a7bb705-bc4b-41a5-a28f-8a9ab35eeef5"}]},"hs_object_id":{"value":"8963401599","timestamp":1655887658801,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963401599","timestamp":1655887658801,"source":"API","sourceVid":[],"requestId":"0a7bb705-bc4b-41a5-a28f-8a9ab35eeef5"}]},"createdate":{"value":"1655887658801","timestamp":1655887658801,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887658801","timestamp":1655887658801,"source":"API","sourceVid":[],"requestId":"0a7bb705-bc4b-41a5-a28f-8a9ab35eeef5"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Wed, 22 Jun 2022 08:47:38 GMT
 - request:
     method: put
-    uri: https://api.hubapi.com/companies/v2/companies/1897466915?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/companies/v2/companies/8963401599?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
       string: '{"properties":[{"name":"name","value":"Foobar"}]}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:43:52 GMT
+      - Wed, 22 Jun 2022 08:47:39 GMT
       Content-Type:
       - application/json;charset=utf-8
-      Transfer-Encoding:
-      - chunked
+      Content-Length:
+      - '419'
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=d363dd44ced64cf09e0d02d86aed6a30b1556981031; expires=Sun, 03-May-20
-        14:43:51 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2BFC695A3F3F92345620E58EF0858268DB1CE263F3000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979556'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '57'
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71f3b86c7bbb32c5-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 507b3fb2-ab7f-4568-bf34-34a40aa5c49e
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498633'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '115'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '11'
+      X-Trace:
+      - 2BDB50D6D927F7BAF19E0673D401F9263BDA7C4B01000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=JC2Y%2BSFzeGgzHQasaakASBtWbNUGnafV%2Fl9pjmWCo5mXW1WHwnF7CXuvd4rm2HMt8whkTq7kSeyBMhiv9F58J25bHKsQQwntKkKoEXaAQ7f2dcPnV7FCy0Gc8CYYd7wJOo4JafdntD2btXER"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b3fd9cdb49f3a-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"portalId":62515,"companyId":1897466915,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1556981031990","timestamp":1556981031990,"source":"CALCULATED","sourceId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1556981031990","timestamp":1556981031990,"source":"CALCULATED","sourceVid":[],"requestId":"56d9cc82-c8a0-4a01-a4a2-2dada90c5943"},{"name":"hs_lastmodifieddate","value":"1556981031717","timestamp":1556981031717,"source":"CALCULATED","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]},"name":{"value":"Foobar","timestamp":1556981031990,"source":"API","sourceId":"56d9cc82-c8a0-4a01-a4a2-2dada90c5943","versions":[{"name":"name","value":"Foobar","timestamp":1556981031990,"sourceId":"56d9cc82-c8a0-4a01-a4a2-2dada90c5943","source":"API","sourceVid":[],"requestId":"56d9cc82-c8a0-4a01-a4a2-2dada90c5943"},{"name":"name","value":"Leuschke-Watsica","timestamp":1556981031717,"source":"API","sourceVid":[],"requestId":"b0cbb498-19a7-4dfd-8740-1051f87157c0"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:43:52 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"companyId":8963401599,"isDeleted":false,"properties":{"hs_lastmodifieddate":{"value":"1655887659039","timestamp":1655887659039,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655887659039","timestamp":1655887659039,"source":"CALCULATED","sourceVid":[],"requestId":"507b3fb2-ab7f-4568-bf34-34a40aa5c49e"},{"name":"hs_lastmodifieddate","value":"1655887658801","timestamp":1655887658801,"source":"CALCULATED","sourceVid":[],"requestId":"0a7bb705-bc4b-41a5-a28f-8a9ab35eeef5"}]},"name":{"value":"Foobar","timestamp":1655887659039,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"Foobar","timestamp":1655887659039,"source":"API","sourceVid":[],"requestId":"507b3fb2-ab7f-4568-bf34-34a40aa5c49e"},{"name":"name","value":"O''Keefe
+        Inc","timestamp":1655887658801,"source":"API","sourceVid":[],"requestId":"0a7bb705-bc4b-41a5-a28f-8a9ab35eeef5"}]},"hs_object_id":{"value":"8963401599","timestamp":1655887658801,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963401599","timestamp":1655887658801,"source":"API","sourceVid":[],"requestId":"0a7bb705-bc4b-41a5-a28f-8a9ab35eeef5"}]},"createdate":{"value":"1655887658801","timestamp":1655887658801,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887658801","timestamp":1655887658801,"source":"API","sourceVid":[],"requestId":"0a7bb705-bc4b-41a5-a28f-8a9ab35eeef5"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Wed, 22 Jun 2022 08:47:39 GMT
+recorded_with: VCR 6.1.0

@@ -1,96 +1,213 @@
 ---
 http_interactions:
 - request:
-    method: get
-    uri: https://api.hubapi.com/contacts/v1/lists/1?hapikey=demo
+    method: post
+    uri: https://api.hubapi.com/contacts/v1/lists?hapikey=<HAPI_KEY>
     body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
+      encoding: UTF-8
+      string: '{"name":"5afdfa11255a55f12986adfa220abcc7","dynamic":false,"portal_id":null}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Fri, 20 Feb 2015 19:03:43 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Wed, 22 Jun 2022 08:48:53 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '382'
+      - '269'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71f3ba3ced0bedb3-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 81a32c8e-dd0a-4e76-9d64-92f3c7ac6d28
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498456'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '126'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B3AEC3E5996002B196BF2330BDAF42342D275C804000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=W%2FyWwvSU3DrZTk5AetqJf82X%2BnxfBFlqASljkWHSeVJydExIuuAz1pneNNdGgn5Hi6uSZHvLzTrwsTWIHRqKej%2BAC5E11W6IWhW%2FNxTHQ3OVWlSFaUFYQTE%2BQWE6tJrl1uTagwTuB%2BJEPmsg"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"metaData":{"processing":"DONE","size":3355,"error":"","lastProcessingStateChangeAt":1335448864306,"lastSizeChangeAt":1424402567742},"name":"twitterers","dynamic":true,"filters":[[{"property":"twitterhandle","operator":"IS_NOT_EMPTY","withinTimeMode":"PAST"}]],"listType":"DYNAMIC","portalId":62515,"createdAt":1335448813688,"listId":1,"updatedAt":1335448813688,"internalListId":1}'
-    http_version: 
-  recorded_at: Fri, 20 Feb 2015 19:03:44 GMT
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"listId":1559,"internalListId":1559,"createdAt":1655887733367,"updatedAt":1655887733367,"name":"5afdfa11255a55f12986adfa220abcc7","listType":"STATIC","filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655887733367,"error":"","listReferencesCount":null,"parentFolderId":null},"archived":false,"teamIds":[],"dynamic":false}'
+  recorded_at: Wed, 22 Jun 2022 08:48:53 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists/-1?hapikey=demo
+    uri: https://api.hubapi.com/contacts/v1/lists/1559?hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Jun 2022 08:48:53 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '275'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 71f3ba400c2d99ee-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - b4c89a24-3fec-44b4-90ce-52f1a36ebff5
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498455'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '125'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BF05905819097B2337046E639ACD0C213891C1249000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=M9%2FbiaUW3ozTvLQt02SMKKvUY%2B%2FDIGVEhRl34mCRwzRr4pXn2FcnXVCFi6ENn%2BXLk1%2FAYoW7fB0KjjYLzF2zHQIMP1TZkzGrPFJe1EZswZCBCKESG3ArjCetYwQSyZRqjpkQ2qyBCDfamquQ"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"listId":1559,"internalListId":1559,"createdAt":1655887733367,"updatedAt":1655887733367,"name":"5afdfa11255a55f12986adfa220abcc7","listType":"STATIC","parentId":0,"filters":[],"metaData":{"size":0,"lastSizeChangeAt":0,"processing":"DONE","lastProcessingStateChangeAt":1655887733617,"error":"","listReferencesCount":null,"parentFolderId":0},"archived":false,"teamIds":[],"dynamic":false}'
+  recorded_at: Wed, 22 Jun 2022 08:48:53 GMT
+- request:
+    method: get
+    uri: https://api.hubapi.com/contacts/v1/lists/-1?hapikey=<HAPI_KEY>
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 404
       message: Not Found
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Fri, 20 Feb 2015 19:06:11 GMT
+      - Wed, 22 Jun 2022 08:48:54 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 71f3ba417a874019-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
       Vary:
       - Accept-Encoding
-      - Accept-Encoding
-      Content-Length:
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 22b67096-5f1c-48f3-9f52-6708ba480654
+      X-Hubspot-Notfound:
+      - 'true'
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498454'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
       - '126'
-      Connection:
-      - keep-alive
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B8AFCCF2B807ABC27DDFA7081448AF33CB975EEB9000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=D3xB8OQdMEz7LUCpX6oin6DF7Nfh2m0g1OodD7kC7C6%2FqqWtnAI%2Bk9FcPNqlL7CEXmP7WaYucfGsCsLueWlNSAfgFrBx37sUlBWfvvOSmSLBo1uicg%2FxL6eMsS%2B2E88fShu9VOQfTjvl%2Bhhg"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
+      encoding: ASCII-8BIT
       string: '{"status":"error","message":"Couldn''t find a List with the given id
-        ''-1''.","requestId":"179444ae-e19c-4084-b4c6-3fd1e5f5bf0d"}'
-    http_version: 
-  recorded_at: Fri, 20 Feb 2015 19:06:11 GMT
-- request:
-    method: get
-    uri: https://api.hubapi.com/contacts/v1/lists/static?count=3&hapikey=demo
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers: {}
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Date:
-      - Wed, 25 Feb 2015 15:08:22 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
-      Content-Length:
-      - '1013'
-      Connection:
-      - keep-alive
-    body:
-      encoding: UTF-8
-      string: '{"lists":[{"dynamic":false,"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1336673990262,"error":"","lastSizeChangeAt":1424559295352,"size":0},"filters":[[{"operator":"IS_NOT_EMPTY","withinTimeMode":"PAST","property":"twitterhandle"}]],"listId":2,"updatedAt":1336673951299,"portalId":62515,"createdAt":1336673951299,"internalListId":2,"name":"HubSpot-HootSuite
-        App"},{"dynamic":false,"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1344891893390,"error":"","lastSizeChangeAt":1424561579485,"size":0},"filters":[],"listId":3,"updatedAt":1344891893390,"listType":"STATIC","portalId":62515,"createdAt":1344891893390,"internalListId":5,"name":"staticTest"},{"dynamic":false,"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1345057450679,"error":"","lastSizeChangeAt":1424562780944,"size":0},"filters":[],"listId":4,"updatedAt":1424574658753,"listType":"STATIC","portalId":62515,"createdAt":1345057450679,"internalListId":6,"name":"Workface
-        Leads"}],"offset":3,"has-more":true}'
-    http_version: 
-  recorded_at: Wed, 25 Feb 2015 15:08:22 GMT
-recorded_with: VCR 2.4.0
+        ''-1''.","correlationId":"22b67096-5f1c-48f3-9f52-6708ba480654","errors":[{"message":"This
+        list -1 does not exist."}],"category":"OBJECT_NOT_FOUND"}'
+  recorded_at: Wed, 22 Jun 2022 08:48:54 GMT
+recorded_with: VCR 6.1.0

@@ -1,5 +1,4 @@
 RSpec.describe Hubspot::Company do
-  before { Hubspot.configure(hapikey: 'demo') }
 
   it_behaves_like "a saveable resource", :company do
     def set_property(company)
@@ -31,7 +30,7 @@ RSpec.describe Hubspot::Company do
       it 'raises an error' do
         expect {
           subject
-        }.to raise_error(Hubspot::RequestError, /resource not found/)
+        }.to raise_error(Hubspot::NotFoundError, /resource not found/)
       end
     end
   end
@@ -164,7 +163,7 @@ RSpec.describe Hubspot::Company do
 
         expect {
           described_class.find subject.id
-        }.to raise_error(Hubspot::RequestError)
+        }.to raise_error(Hubspot::NotFoundError)
       end
     end
   end
@@ -283,8 +282,8 @@ RSpec.describe Hubspot::Company do
 
       subject { described_class.add_contact company.id, 1234 }
 
-      it 'raises an error' do
-        expect { subject }.to raise_error(Hubspot::RequestError, /CONTACT=1234 is not valid/)
+      it 'returns false' do
+        expect(subject).to eq(false)
       end
     end
 
@@ -294,7 +293,7 @@ RSpec.describe Hubspot::Company do
       subject { described_class.add_contact 1, 1 }
 
       it 'raises an error' do
-        expect { subject }.to raise_error(Hubspot::RequestError, /COMPANY=1 is not valid/)
+        expect(subject).to eq(false)
       end
     end
   end

@@ -2,188 +2,412 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists/1/contacts/all?hapikey=demo&property=email
+    uri: https://api.hubapi.com/contacts/v1/lists/1506/contacts/all?hapikey=<HAPI_KEY>&property=email
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Fri, 20 Feb 2015 19:23:05 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Wed, 22 Jun 2022 08:48:27 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71f3b99709cc3aa5-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - ee197d93-0aaf-46f0-8381-75d24b1231b4
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498521'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '126'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BAA7A98D390BF3C62AF4160B5B2C177C1D78FDE29000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rJg7SNsp5tKuZDm1CRbAcgYghHSsYACDCtiV7vGYvckjvHl%2B2mjGmbeNEdu%2BiyYRK9BJa%2BXz2KyyWhHnFFBIWxCFLMWZbIyyGyB1q9fu6WMkWLGPmaLj5DsabRIWIRIFBer8Cop2OdL%2FQ22E"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"contacts":[{"addedAt":1405348978152,"vid":154835,"canonical-vid":154835,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mODjWYjQOrc4-OG1UKIewQ73NoekhLaxF5x92UM5TAgvt0Q47ZYip_MsQWc1AMwgrtOZRzXBKR38eJjVnDS-3kErr1d1XJt8zK-i-DD6IL64VTgsL4lWrNiRE1hqj8FVgUz0mL7","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mODjWYjQOrc4-OG1UKIewQ73NoekhLaxF5x92UM5TAgvt0Q47ZYip_MsQWc1AMwgrtOZRzXBKR38eJjVnDS-3kErr1d1XJt8zK-i-DD6IL64VTgsL4lWrNiRE1hqj8FVgUz0mL7/","properties":{"lastmodifieddate":{"value":"1423205608157"},"email":{"value":"test@hubspot.com"}},"form-submissions":[{"conversion-id":"b18f9fd8-b8d3-49e5-898a-ac301fac93e9","timestamp":1405347851180,"form-id":"b844ad5e-32bd-41e1-b0e6-ed990c5f3d1b","portal-id":62515,"page-url":"http://demo.hubapi.com/your-stunning-headline-30","page-title":"Your
-        stunning headline!","page-id":"324527","title":"My New Form","meta-data":[]}],"identity-profiles":[{"vid":154835,"saved-at-timestamp":1405347851237,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"test@hubspot.com","timestamp":1405347851180},{"type":"LEAD_GUID","value":"c8f20860-d3d6-4b57-b092-86a07cebdcbc","timestamp":1405347851237}]}],"merge-audits":[]},{"addedAt":1390571515638,"vid":196182,"canonical-vid":196182,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mNX7yxTOluOjo2x9k8lVUaqvFcmzJRL9KPlrIhvcBlOQQHJRRBo_AQGdQfrSvzVMd8UyWFan8LGGPpa7N0W4UGqMOtz_q-VXUZh-Tr3lDBw_vMsDlk0o5ZkYw-iXk6V4FWI4wXq","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mNX7yxTOluOjo2x9k8lVUaqvFcmzJRL9KPlrIhvcBlOQQHJRRBo_AQGdQfrSvzVMd8UyWFan8LGGPpa7N0W4UGqMOtz_q-VXUZh-Tr3lDBw_vMsDlk0o5ZkYw-iXk6V4FWI4wXq/","properties":{"lastmodifieddate":{"value":"1423205607564"},"email":{"value":"curtis.romig@bryancave.com"}},"form-submissions":[],"identity-profiles":[{"vid":196182,"saved-at-timestamp":1390569372699,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"curtis.romig@bryancave.com","timestamp":1390568725415},{"type":"LEAD_GUID","value":"e18dc184-0238-48f1-a8a2-4476733f50d3","timestamp":1390569372641}]}],"merge-audits":[]},{"addedAt":1390570818268,"vid":196186,"canonical-vid":196186,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mP1E1S0ytBpO8FT1P3H6PPeIJDnwyTyXdFcFq_cNpObLgTX2iCzHNMl87eAn--sH5FiifquuGMW8R-J1vOoTOCKEWS5EKZB7Xd3JbRffZg5nYjEJpml7Ri7XOIBRBU_eD84rjtd","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mP1E1S0ytBpO8FT1P3H6PPeIJDnwyTyXdFcFq_cNpObLgTX2iCzHNMl87eAn--sH5FiifquuGMW8R-J1vOoTOCKEWS5EKZB7Xd3JbRffZg5nYjEJpml7Ri7XOIBRBU_eD84rjtd/","properties":{"lastmodifieddate":{"value":"1423205608022"},"email":{"value":"ben@synaxisworks.com"}},"form-submissions":[],"identity-profiles":[{"vid":196186,"saved-at-timestamp":1390569372769,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"ben@synaxisworks.com","timestamp":1390568759222},{"type":"LEAD_GUID","value":"c0981af6-1d44-4375-a425-f880cef2fd83","timestamp":1390569372756}]}],"merge-audits":[]},{"addedAt":1390570783982,"vid":196189,"canonical-vid":196189,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mMG8IIvH1VvFPinqZeK5OapiYXPFUYrvqfbXLYjnQbfZNN0vK8elbVvZzbCsXjVqju4wNlT7S1HKhBcPfYc6Iok46sFYQR-KdE9kYJyNY8TRg2a324ikBr4Icj8VzMlLfnv4NfS","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mMG8IIvH1VvFPinqZeK5OapiYXPFUYrvqfbXLYjnQbfZNN0vK8elbVvZzbCsXjVqju4wNlT7S1HKhBcPfYc6Iok46sFYQR-KdE9kYJyNY8TRg2a324ikBr4Icj8VzMlLfnv4NfS/","properties":{"lastmodifieddate":{"value":"1414183436568"},"email":{"value":"glennbachman@att.net"}},"form-submissions":[],"identity-profiles":[{"vid":196189,"saved-at-timestamp":1390569372781,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"glennbachman@att.net","timestamp":1390568755598},{"type":"LEAD_GUID","value":"f97a9531-2780-4a53-bed1-3659c58e1b98","timestamp":1390569372775}]}],"merge-audits":[]},{"addedAt":1390579883039,"vid":196190,"canonical-vid":196190,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mOmKbAP3Ub6TT0YQEL51G4u6uSL0AHttpVif_1iM6UHMI5HWSHugwmQFDLiFrb1FA3ST5NDNJpy9F7IUZxiy6SpobyUOV9ggNu7dU5NUaHb_RkNJ7PD82311TVPLK6hS_hsRIeH","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mOmKbAP3Ub6TT0YQEL51G4u6uSL0AHttpVif_1iM6UHMI5HWSHugwmQFDLiFrb1FA3ST5NDNJpy9F7IUZxiy6SpobyUOV9ggNu7dU5NUaHb_RkNJ7PD82311TVPLK6hS_hsRIeH/","properties":{"lastmodifieddate":{"value":"1414183632930"},"email":{"value":"jamikohn@yahoo.com"}},"form-submissions":[],"identity-profiles":[{"vid":196190,"saved-at-timestamp":1390569372777,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"jamikohn@yahoo.com","timestamp":1390568666276},{"type":"LEAD_GUID","value":"e8ee498e-7947-4d8a-b386-c2b260dfad62","timestamp":1390569372767}]}],"merge-audits":[]},{"addedAt":1390576748642,"vid":196191,"canonical-vid":196191,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mNGzwFbmcUWJu0JbPwBM0YewhhEwsZCkbHAeqOyXhIWbs2WWkxmaBmeKVNAdiHXV0qethQdJ0D2dViZBUw2Yz9vuUxBNtPfBBUbdGXU275th9Ht3SlsBiuuIGuRlROpm8TgH6cR","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mNGzwFbmcUWJu0JbPwBM0YewhhEwsZCkbHAeqOyXhIWbs2WWkxmaBmeKVNAdiHXV0qethQdJ0D2dViZBUw2Yz9vuUxBNtPfBBUbdGXU275th9Ht3SlsBiuuIGuRlROpm8TgH6cR/","properties":{"lastmodifieddate":{"value":"1423205608464"},"email":{"value":"emily.palik@adp.com"}},"form-submissions":[],"identity-profiles":[{"vid":196191,"saved-at-timestamp":1390569372782,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"emily.palik@adp.com","timestamp":1390568893411},{"type":"LEAD_GUID","value":"a42c7c5c-939e-4b33-b6b1-7bbc5d6f165e","timestamp":1390569372773}]}],"merge-audits":[]},{"addedAt":1390570794523,"vid":196199,"canonical-vid":196199,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mMMya1emt_tUcoWhhQNn0IJyAOlpyLDAgp55zHDZ3Yxwq4fZP-HfZpKyY8BKIGI7EoMLQrVgB1XaYy4t3xoUzvkxjW-ET4jy9XdbxEN8ZiVsjYWHBkcF0buy_WBWL55nKRbGiNR","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mMMya1emt_tUcoWhhQNn0IJyAOlpyLDAgp55zHDZ3Yxwq4fZP-HfZpKyY8BKIGI7EoMLQrVgB1XaYy4t3xoUzvkxjW-ET4jy9XdbxEN8ZiVsjYWHBkcF0buy_WBWL55nKRbGiNR/","properties":{"lastmodifieddate":{"value":"1423205607391"},"email":{"value":"emorgan@mdecorps.com"}},"form-submissions":[],"identity-profiles":[{"vid":196199,"saved-at-timestamp":1390569372911,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"emorgan@mdecorps.com","timestamp":1390568741710},{"type":"LEAD_GUID","value":"2225f650-6781-4e20-9269-adc783a00474","timestamp":1390569372905}]}],"merge-audits":[]},{"addedAt":1390570790766,"vid":196202,"canonical-vid":196202,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mMwr8ZaZJ7YE7HDFm6M2eVwzl74EAYYxUKeCKcNkK9ms-D_c5zgV94M9ibmm8xKoeUOiIUJV53edvmZTm2965xtuiF7SuSuMghV_MeHXR0B-_IIS828v1YO-aMT2rWDAY5uEfJC","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mMwr8ZaZJ7YE7HDFm6M2eVwzl74EAYYxUKeCKcNkK9ms-D_c5zgV94M9ibmm8xKoeUOiIUJV53edvmZTm2965xtuiF7SuSuMghV_MeHXR0B-_IIS828v1YO-aMT2rWDAY5uEfJC/","properties":{"lastmodifieddate":{"value":"1414183314808"},"email":{"value":"janegoetz@bellsouth.net"}},"form-submissions":[],"identity-profiles":[{"vid":196202,"saved-at-timestamp":1390569372925,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"janegoetz@bellsouth.net","timestamp":1390568790409},{"type":"LEAD_GUID","value":"be95e629-635b-4fa3-a17d-dd357263a596","timestamp":1390569372918}]}],"merge-audits":[]},{"addedAt":1390570817019,"vid":196204,"canonical-vid":196204,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mMNhr8mZHTki8tSOY8N2lXSQ5RDt7X4d1DQ3fkblkag9kJq5YG-OfwOJ8hR5i0Px-8LjAH09zZ9mNwyYjofWxBRD0_NeA4oL9agT7CziXXP3whZDrlxPO_cJlYOaMGWl9PEQN3n","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mMNhr8mZHTki8tSOY8N2lXSQ5RDt7X4d1DQ3fkblkag9kJq5YG-OfwOJ8hR5i0Px-8LjAH09zZ9mNwyYjofWxBRD0_NeA4oL9agT7CziXXP3whZDrlxPO_cJlYOaMGWl9PEQN3n/","properties":{"lastmodifieddate":{"value":"1423205608880"},"email":{"value":"cwscragg@southernco.com"}},"form-submissions":[],"identity-profiles":[{"vid":196204,"saved-at-timestamp":1390569372937,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"cwscragg@southernco.com","timestamp":1390568620618},{"type":"LEAD_GUID","value":"3a6e4881-0d6f-455b-b036-5f77d75815db","timestamp":1390569372924}]}],"merge-audits":[]},{"addedAt":1390570790850,"vid":196206,"canonical-vid":196206,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mNSct22s6BA8seP_RIiuSua0Bes50GJyFnXYB0D3928fsqeDn30f16uytO7GOd44BFeSWPjD17ctmkeXVPnmvknjE6rP9FOZocChfmVpwWYBy9l6_IW5ntQneqgSvzamzBp2vW9","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mNSct22s6BA8seP_RIiuSua0Bes50GJyFnXYB0D3928fsqeDn30f16uytO7GOd44BFeSWPjD17ctmkeXVPnmvknjE6rP9FOZocChfmVpwWYBy9l6_IW5ntQneqgSvzamzBp2vW9/","properties":{"lastmodifieddate":{"value":"1423205608258"},"email":{"value":"gallen@boomtownroi.com"}},"form-submissions":[],"identity-profiles":[{"vid":196206,"saved-at-timestamp":1390569372951,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"gallen@boomtownroi.com","timestamp":1390568874749},{"type":"LEAD_GUID","value":"aa9278ab-79c4-4f3a-81b3-21ff50edb4b8","timestamp":1390569372923}]}],"merge-audits":[]},{"addedAt":1390570802502,"vid":196219,"canonical-vid":196219,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mPNo8OQkTi9IzoVkXdRtIV33-4WHBL_7D-zBAhKUXtFnOfXmMidiTFOyWv6MAssQHbserp_DjLz_KwdtgSiyVZcrVbi8aLjC3oVan3uyDR2IOStKj0YCuHbCpf-2iKUneWnfz0l","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mPNo8OQkTi9IzoVkXdRtIV33-4WHBL_7D-zBAhKUXtFnOfXmMidiTFOyWv6MAssQHbserp_DjLz_KwdtgSiyVZcrVbi8aLjC3oVan3uyDR2IOStKj0YCuHbCpf-2iKUneWnfz0l/","properties":{"lastmodifieddate":{"value":"1423205607823"},"email":{"value":"elisa@idealrealtyco.com"}},"form-submissions":[],"identity-profiles":[{"vid":196219,"saved-at-timestamp":1390569373147,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"elisa@idealrealtyco.com","timestamp":1390568666112},{"type":"LEAD_GUID","value":"169f0384-c374-4c28-bd20-3d452d706ede","timestamp":1390569373140}]}],"merge-audits":[]},{"addedAt":1390570795086,"vid":196223,"canonical-vid":196223,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mOFogKG3dwBBHkQNxe3YVA9Nrp7oX4RGxTxKUsGeGArONIig1Mg6-1KJZ4IM19yz-qTxvPKawwWh3e9UuhlTGdp1Lj_Qp_BWfpKH0_J7IJMj2eSni7wMFIvEHjwH7gIMKAPFt7Z","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mOFogKG3dwBBHkQNxe3YVA9Nrp7oX4RGxTxKUsGeGArONIig1Mg6-1KJZ4IM19yz-qTxvPKawwWh3e9UuhlTGdp1Lj_Qp_BWfpKH0_J7IJMj2eSni7wMFIvEHjwH7gIMKAPFt7Z/","properties":{"lastmodifieddate":{"value":"1423205607654"},"email":{"value":"greg@insuranceadv.com"}},"form-submissions":[],"identity-profiles":[{"vid":196223,"saved-at-timestamp":1390569373199,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"greg@insuranceadv.com","timestamp":1390568778324},{"type":"LEAD_GUID","value":"2ce50021-4ac6-4c30-9292-a29e8d0cecbf","timestamp":1390569373192}]}],"merge-audits":[]},{"addedAt":1390571511078,"vid":196226,"canonical-vid":196226,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mNLD-L1qEgkTYGvnWvJN1tSMvmy-SExqHN4xbqubpdoPhQqG2F8q46TdXn2PIz4s6V6wjfc_Mrt9dMDgxqKdSA0qF4kwJKO5bTC1boKjLoXo1yNYOibZprP2CIv0yXg0CZTsAsc","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mNLD-L1qEgkTYGvnWvJN1tSMvmy-SExqHN4xbqubpdoPhQqG2F8q46TdXn2PIz4s6V6wjfc_Mrt9dMDgxqKdSA0qF4kwJKO5bTC1boKjLoXo1yNYOibZprP2CIv0yXg0CZTsAsc/","properties":{"lastmodifieddate":{"value":"1423205609225"},"email":{"value":"jasaue@um.dk"}},"form-submissions":[],"identity-profiles":[{"vid":196226,"saved-at-timestamp":1390569373230,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"jasaue@um.dk","timestamp":1390568686333},{"type":"LEAD_GUID","value":"060e76ac-1408-4831-a045-6bb3869acad1","timestamp":1390569373224}]}],"merge-audits":[]},{"addedAt":1390570784988,"vid":196229,"canonical-vid":196229,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mO6ZqzLBf8uQz17QpXsDPFOaTMYK8eyUIwtrFwCgG4TnErdPQoElQz-7GXUg_qUJmXTrxpg2bEItB_IBP57Eonf_ttAHJgTO-SF5Vc5tidUCtd1Uyf2Ga3Al9VCCif3KyLpSVaO","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mO6ZqzLBf8uQz17QpXsDPFOaTMYK8eyUIwtrFwCgG4TnErdPQoElQz-7GXUg_qUJmXTrxpg2bEItB_IBP57Eonf_ttAHJgTO-SF5Vc5tidUCtd1Uyf2Ga3Al9VCCif3KyLpSVaO/","properties":{"lastmodifieddate":{"value":"1423205608402"},"email":{"value":"kcoughlin@kaymedical.com"}},"form-submissions":[],"identity-profiles":[{"vid":196229,"saved-at-timestamp":1390569373270,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"kcoughlin@kaymedical.com","timestamp":1390568685689},{"type":"LEAD_GUID","value":"0e906f48-d194-4b04-8c86-7fe57df25819","timestamp":1390569373264}]}],"merge-audits":[]},{"addedAt":1390572721298,"vid":196232,"canonical-vid":196232,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mP0V932OZ6xDxDNAk6NTvAAq3wyWIPxcBwhByv-Ou5XKTxKDwgjyP4GoZ7GWBIZQtVhfbN2JF0MzF3Jory1sp-GTKrz06BEH55lJyPmKNJE3mcwJGip7bIYp1PIHP9mCtHouU0X","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mP0V932OZ6xDxDNAk6NTvAAq3wyWIPxcBwhByv-Ou5XKTxKDwgjyP4GoZ7GWBIZQtVhfbN2JF0MzF3Jory1sp-GTKrz06BEH55lJyPmKNJE3mcwJGip7bIYp1PIHP9mCtHouU0X/","properties":{"lastmodifieddate":{"value":"1414183315424"},"email":{"value":"abbiewaite@gmail.com"}},"form-submissions":[],"identity-profiles":[{"vid":196232,"saved-at-timestamp":1390569373305,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"abbiewaite@gmail.com","timestamp":1390568851456},{"type":"LEAD_GUID","value":"913966d6-6d34-4c17-a412-d425dc4843c1","timestamp":1390569373286}]}],"merge-audits":[]},{"addedAt":1390570791046,"vid":196236,"canonical-vid":196236,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mMje3TrvDw2mDD9olP2Fkhv6Jrs4lmC8bdWRoX8DQFCcO-9y388FacSHboZ5w4zQINbvyMkwBb-T0Av-mn3A6MhcrY6SWasd1Jkuh19b0UuW2I4yflqFHZjjIotnPAGXIeImbFP","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mMje3TrvDw2mDD9olP2Fkhv6Jrs4lmC8bdWRoX8DQFCcO-9y388FacSHboZ5w4zQINbvyMkwBb-T0Av-mn3A6MhcrY6SWasd1Jkuh19b0UuW2I4yflqFHZjjIotnPAGXIeImbFP/","properties":{"lastmodifieddate":{"value":"1423205608135"},"email":{"value":"dhartnett@macoc.com"}},"form-submissions":[],"identity-profiles":[{"vid":196236,"saved-at-timestamp":1390569373344,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"dhartnett@macoc.com","timestamp":1390568628842},{"type":"LEAD_GUID","value":"246abaf6-8e82-47b1-98fb-422072748d68","timestamp":1390569373335}]}],"merge-audits":[]},{"addedAt":1390570817226,"vid":196262,"canonical-vid":196262,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mOcdiXeGT6IIjJCA8inUaqk5N0uqwxBk2wjgvqY64C2K0uq8S8ayQKu1wBMroEvhYNw9VvEzdkgQ-A69E61IsK1R2JuQxOHau4gNr3yqKpmOBGf__xdzuCsBhd_gW-lkgrOHj0h","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mOcdiXeGT6IIjJCA8inUaqk5N0uqwxBk2wjgvqY64C2K0uq8S8ayQKu1wBMroEvhYNw9VvEzdkgQ-A69E61IsK1R2JuQxOHau4gNr3yqKpmOBGf__xdzuCsBhd_gW-lkgrOHj0h/","properties":{"lastmodifieddate":{"value":"1423205607366"},"email":{"value":"john@twentysix2.com"}},"form-submissions":[],"identity-profiles":[{"vid":196262,"saved-at-timestamp":1390569373589,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"john@twentysix2.com","timestamp":1390568819184},{"type":"LEAD_GUID","value":"da7082b6-eecd-47af-acd3-666ce181264f","timestamp":1390569373581}]}],"merge-audits":[]},{"addedAt":1390570786383,"vid":196266,"canonical-vid":196266,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mPUeycK5Tsv2J6mMRsA3uzL1dXf9sVgdgv7MF2uaxCsLv79BidGtXCy4IURTH77aF1wdH_RqAESMq_G-ZbSsYTbvleiWsRdh7clvaQgsO8d96xXU7SDvbK_rcFEHxF0DuoE331g","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mPUeycK5Tsv2J6mMRsA3uzL1dXf9sVgdgv7MF2uaxCsLv79BidGtXCy4IURTH77aF1wdH_RqAESMq_G-ZbSsYTbvleiWsRdh7clvaQgsO8d96xXU7SDvbK_rcFEHxF0DuoE331g/","properties":{"lastmodifieddate":{"value":"1423205608331"},"email":{"value":"gregg.bedol@redzoneconsulting.com"}},"form-submissions":[],"identity-profiles":[{"vid":196266,"saved-at-timestamp":1390569373650,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"gregg.bedol@redzoneconsulting.com","timestamp":1390568772736},{"type":"LEAD_GUID","value":"c80f8190-7ae7-4b24-8017-8a91e216fb7b","timestamp":1390569373643}]}],"merge-audits":[]},{"addedAt":1390571523022,"vid":196268,"canonical-vid":196268,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mOIaJ3BoNxM7rWaHCeLCL759vfHxr-wyQh7eJJg19gApFoNRK_LlsxXJu2AXFOY8z69BXlC4wtPXFiYsNXlYS5U8iUApCGqnncppu49eZeLOH0MDZVTmg8r0vVaYygT2sEPa4Bo","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mOIaJ3BoNxM7rWaHCeLCL759vfHxr-wyQh7eJJg19gApFoNRK_LlsxXJu2AXFOY8z69BXlC4wtPXFiYsNXlYS5U8iUApCGqnncppu49eZeLOH0MDZVTmg8r0vVaYygT2sEPa4Bo/","properties":{"lastmodifieddate":{"value":"1423205607904"},"email":{"value":"dkelly@and-solution.com"}},"form-submissions":[],"identity-profiles":[{"vid":196268,"saved-at-timestamp":1390569373656,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"dkelly@and-solution.com","timestamp":1390568725471},{"type":"LEAD_GUID","value":"b1deda0d-9800-41db-bf9c-9f3c04f7159e","timestamp":1390569373649}]}],"merge-audits":[]},{"addedAt":1390570817337,"vid":196274,"canonical-vid":196274,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mPUf7cakaLGOThccNV5ooegt_4P5ElT7pGwPkS8zxohL7W9z79cRmT9rBd2UAxwY95dJAix-Iq7PjEiUGoAciDoAec9zVS_fOXM_h8yz6-k4ekagHmwxJoucvGEk-A3Ln-Sye9W","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mPUf7cakaLGOThccNV5ooegt_4P5ElT7pGwPkS8zxohL7W9z79cRmT9rBd2UAxwY95dJAix-Iq7PjEiUGoAciDoAec9zVS_fOXM_h8yz6-k4ekagHmwxJoucvGEk-A3Ln-Sye9W/","properties":{"lastmodifieddate":{"value":"1414183633060"},"email":{"value":"dan.pious@gmail.com"}},"form-submissions":[],"identity-profiles":[{"vid":196274,"saved-at-timestamp":1390569373690,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"dan.pious@gmail.com","timestamp":1390568851710},{"type":"LEAD_GUID","value":"9416cfbf-cc43-4fa0-9bba-2cd699c7b0c5","timestamp":1390569373680}]}],"merge-audits":[]}],"has-more":true,"vid-offset":196274}'
-    http_version: 
-  recorded_at: Fri, 20 Feb 2015 19:23:06 GMT
+      encoding: ASCII-8BIT
+      string: '{"contacts":[{"addedAt":1655887691378,"vid":66701,"canonical-vid":66701,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887705035"},"email":{"value":"e78c2d8f19020126430286425ebc6bc9@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66701,"saved-at-timestamp":1655887691005,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"e78c2d8f19020126430286425ebc6bc9@hubspot.com","timestamp":1655887690923,"is-primary":true},{"type":"LEAD_GUID","value":"a9965081-502a-43ae-bf74-b2f301294b1a","timestamp":1655887691001}]}],"merge-audits":[]},{"addedAt":1655887691971,"vid":66751,"canonical-vid":66751,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887704020"},"email":{"value":"69fc396365f810571f1371f82d7dc808@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66751,"saved-at-timestamp":1655887691612,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"69fc396365f810571f1371f82d7dc808@hubspot.com","timestamp":1655887691584,"is-primary":true},{"type":"LEAD_GUID","value":"7b0eb208-9cd0-4065-82bd-af75723dca55","timestamp":1655887691606}]}],"merge-audits":[]},{"addedAt":1655887692593,"vid":66801,"canonical-vid":66801,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887704495"},"email":{"value":"0d644fb1a9cf9545d1e1b6c96a4b01a4@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66801,"saved-at-timestamp":1655887692198,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"0d644fb1a9cf9545d1e1b6c96a4b01a4@hubspot.com","timestamp":1655887692185,"is-primary":true},{"type":"LEAD_GUID","value":"8676a486-89d2-4c4c-a515-b1bdfc04a511","timestamp":1655887692194}]}],"merge-audits":[]},{"addedAt":1655887693165,"vid":66851,"canonical-vid":66851,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887693298"},"email":{"value":"7704585cdfaa43eb276e617eebdf3922@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66851,"saved-at-timestamp":1655887692825,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"7704585cdfaa43eb276e617eebdf3922@hubspot.com","timestamp":1655887692797,"is-primary":true},{"type":"LEAD_GUID","value":"a0723261-0040-4590-95f2-75cdde69b707","timestamp":1655887692821}]}],"merge-audits":[]},{"addedAt":1655887696915,"vid":66852,"canonical-vid":66852,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887705825"},"email":{"value":"7ab84050bfb19913c4c1a2ee4fab78ae@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66852,"saved-at-timestamp":1655887696530,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"7ab84050bfb19913c4c1a2ee4fab78ae@hubspot.com","timestamp":1655887696517,"is-primary":true},{"type":"LEAD_GUID","value":"06bfa88c-c620-45da-afa1-8f8dd3fdb9b5","timestamp":1655887696528}]}],"merge-audits":[]},{"addedAt":1655887693790,"vid":66901,"canonical-vid":66901,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887694230"},"email":{"value":"cce41ba499c792e27efec0b2b7a3c41d@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66901,"saved-at-timestamp":1655887693408,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"cce41ba499c792e27efec0b2b7a3c41d@hubspot.com","timestamp":1655887693364,"is-primary":true},{"type":"LEAD_GUID","value":"1c0011aa-5956-4959-8212-ef50602b329f","timestamp":1655887693404}]}],"merge-audits":[]},{"addedAt":1655887694511,"vid":66902,"canonical-vid":66902,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887700106"},"email":{"value":"839a5e4a687fe78c76b19de8b1462b4c@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66902,"saved-at-timestamp":1655887694037,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"839a5e4a687fe78c76b19de8b1462b4c@hubspot.com","timestamp":1655887694024,"is-primary":true},{"type":"LEAD_GUID","value":"3b7d2390-9562-40e2-a601-b8de099fdcac","timestamp":1655887694034}]}],"merge-audits":[]},{"addedAt":1655887698322,"vid":66903,"canonical-vid":66903,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887698650"},"email":{"value":"70dc34418f8a3ac23c6bd4c668a01067@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66903,"saved-at-timestamp":1655887697971,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"70dc34418f8a3ac23c6bd4c668a01067@hubspot.com","timestamp":1655887697958,"is-primary":true},{"type":"LEAD_GUID","value":"f0bb2bc3-bdcd-4b8b-aaaa-74024a5a5a2d","timestamp":1655887697969}]}],"merge-audits":[]},{"addedAt":1655887695102,"vid":66951,"canonical-vid":66951,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887695503"},"email":{"value":"5cf39df4aaaa7c693f3ea97e146743f9@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66951,"saved-at-timestamp":1655887694767,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"5cf39df4aaaa7c693f3ea97e146743f9@hubspot.com","timestamp":1655887694739,"is-primary":true},{"type":"LEAD_GUID","value":"a2bea610-a334-4dc3-a361-a0bfdf67ee5f","timestamp":1655887694762}]}],"merge-audits":[]},{"addedAt":1655887699541,"vid":66952,"canonical-vid":66952,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887701658"},"email":{"value":"2707e3ece69f6214af13cb48c3150894@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66952,"saved-at-timestamp":1655887699168,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"2707e3ece69f6214af13cb48c3150894@hubspot.com","timestamp":1655887699155,"is-primary":true},{"type":"LEAD_GUID","value":"e847b70e-afef-4db1-b871-c1e58fc06cb7","timestamp":1655887699166}]}],"merge-audits":[]},{"addedAt":1655887701932,"vid":66953,"canonical-vid":66953,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887702191"},"email":{"value":"6bfc0e1d4796949dfd479ad2f94040a0@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66953,"saved-at-timestamp":1655887701567,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"6bfc0e1d4796949dfd479ad2f94040a0@hubspot.com","timestamp":1655887701550,"is-primary":true},{"type":"LEAD_GUID","value":"d2a56ba6-b431-4ef0-a528-7a23d3aa31a7","timestamp":1655887701564}]}],"merge-audits":[]},{"addedAt":1655887703368,"vid":66954,"canonical-vid":66954,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887704019"},"email":{"value":"0b4ead8d48f38f4a51e2b50311559d95@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66954,"saved-at-timestamp":1655887703009,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"0b4ead8d48f38f4a51e2b50311559d95@hubspot.com","timestamp":1655887702965,"is-primary":true},{"type":"LEAD_GUID","value":"fc33bd14-8560-4dd2-9320-85fdc7abe505","timestamp":1655887703007}]}],"merge-audits":[]},{"addedAt":1655887695730,"vid":67001,"canonical-vid":67001,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887706270"},"email":{"value":"46268f0ea067e9913dc8656245941629@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":67001,"saved-at-timestamp":1655887695305,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"46268f0ea067e9913dc8656245941629@hubspot.com","timestamp":1655887695290,"is-primary":true},{"type":"LEAD_GUID","value":"867b2fc4-0094-4261-88f0-96f4e0d917b4","timestamp":1655887695301}]}],"merge-audits":[]},{"addedAt":1655887701341,"vid":67002,"canonical-vid":67002,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887701819"},"email":{"value":"2d5209c641a4753a18d9da1d77aa580f@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":67002,"saved-at-timestamp":1655887700977,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"2d5209c641a4753a18d9da1d77aa580f@hubspot.com","timestamp":1655887700963,"is-primary":true},{"type":"LEAD_GUID","value":"394e0bbe-0a42-4c53-b858-21b38c0b6766","timestamp":1655887700974}]}],"merge-audits":[]},{"addedAt":1655887696332,"vid":67051,"canonical-vid":67051,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887702684"},"email":{"value":"9422634eee1503c29cd6597ca098b9c0@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":67051,"saved-at-timestamp":1655887695967,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"9422634eee1503c29cd6597ca098b9c0@hubspot.com","timestamp":1655887695934,"is-primary":true},{"type":"LEAD_GUID","value":"3d7d90de-67e9-4168-a1bd-61ad6fce37fe","timestamp":1655887695964}]}],"merge-audits":[]},{"addedAt":1655887697750,"vid":67101,"canonical-vid":67101,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887698383"},"email":{"value":"760bd0fbe4b19f8283622314e5fe5f37@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":67101,"saved-at-timestamp":1655887697388,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"760bd0fbe4b19f8283622314e5fe5f37@hubspot.com","timestamp":1655887697372,"is-primary":true},{"type":"LEAD_GUID","value":"b59f7dca-5532-4126-8967-2c9c203df956","timestamp":1655887697383}]}],"merge-audits":[]},{"addedAt":1655887698960,"vid":67151,"canonical-vid":67151,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887699072"},"email":{"value":"1655351f79289a74681a75f7d7be488a@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":67151,"saved-at-timestamp":1655887698590,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"1655351f79289a74681a75f7d7be488a@hubspot.com","timestamp":1655887698575,"is-primary":true},{"type":"LEAD_GUID","value":"ff863d45-3272-4825-84da-414d3795f629","timestamp":1655887698586}]}],"merge-audits":[]},{"addedAt":1655887700188,"vid":67201,"canonical-vid":67201,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887700708"},"email":{"value":"bfaa3d2807b7ca3c72e371c922fd9938@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":67201,"saved-at-timestamp":1655887699798,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"bfaa3d2807b7ca3c72e371c922fd9938@hubspot.com","timestamp":1655887699752,"is-primary":true},{"type":"LEAD_GUID","value":"059f6228-86f0-47b9-91d1-15ad26ca7b6f","timestamp":1655887699794}]}],"merge-audits":[]},{"addedAt":1655887700763,"vid":67251,"canonical-vid":67251,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887701042"},"email":{"value":"b6fdb33733f0aeb1d053cd1bd1619b4c@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":67251,"saved-at-timestamp":1655887700405,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"b6fdb33733f0aeb1d053cd1bd1619b4c@hubspot.com","timestamp":1655887700390,"is-primary":true},{"type":"LEAD_GUID","value":"ca7a68c4-19e4-42e4-8e47-159dffa21a6f","timestamp":1655887700400}]}],"merge-audits":[]},{"addedAt":1655887702749,"vid":67252,"canonical-vid":67252,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887702939"},"email":{"value":"ad28e6c4b53f173057880fa66a9b764e@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":67252,"saved-at-timestamp":1655887702368,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"ad28e6c4b53f173057880fa66a9b764e@hubspot.com","timestamp":1655887702354,"is-primary":true},{"type":"LEAD_GUID","value":"de66caf3-952e-4f8f-bd3b-3fd601c26330","timestamp":1655887702366}]}],"merge-audits":[]}],"has-more":true,"vid-offset":67301}'
+  recorded_at: Wed, 22 Jun 2022 08:48:26 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists/1?hapikey=demo
+    uri: https://api.hubapi.com/contacts/v1/lists/1506?hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Wed, 25 Feb 2015 18:01:14 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Wed, 22 Jun 2022 08:48:27 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '439'
+      - '294'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71f3b9991de640ed-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 7eac49d9-ff4f-4012-84f5-408b3ab2f600
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498520'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '125'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B3158C5668EAE6B3D8592953A216EC994F115C003000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8Do%2F41sOeALnE6DeSnsEHdi%2FWOFxMKSxUbNh3fB59RGeen%2FG4S4hGelMoTbgalF7kRYHt6RtxvATBqlz%2BmhyxDKgYlocnLdvOSPzdjVD8Xy8fkRasONeYSTc%2B%2BPI%2FXYRvzimw8cBV0r6zNnZ"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"dynamic":true,"metaData":{"processing":"DONE","lastProcessingStateChangeAt":1424576267785,"lastSizeChangeAt":1424834705600,"error":"","size":3363},"createdAt":1335448813688,"portalId":62515,"listId":1,"listType":"DYNAMIC","updatedAt":1424575262863,"filters":[[{"type":"string","operator":"IS_NOT_EMPTY","filterFamily":"PropertyValue","withinTimeMode":"PAST","property":"twitterhandle"}]],"internalListId":97398,"name":"update
-        list name"}'
-    http_version: 
-  recorded_at: Wed, 25 Feb 2015 18:01:13 GMT
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"listId":1506,"internalListId":1506,"createdAt":1655887677391,"updatedAt":1655887677391,"name":"contacts
+        list 6b17301d89a73db33b05d5fb8b319f5b","listType":"STATIC","parentId":0,"filters":[],"metaData":{"size":24,"lastSizeChangeAt":1655887706508,"processing":"DONE","lastProcessingStateChangeAt":1655887690705,"error":"","listReferencesCount":null,"parentFolderId":0},"archived":false,"teamIds":[],"dynamic":false}'
+  recorded_at: Wed, 22 Jun 2022 08:48:27 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists/1/contacts/all?count=2&hapikey=demo&property=email
+    uri: https://api.hubapi.com/contacts/v1/lists/1506/contacts/all?count=2&hapikey=<HAPI_KEY>&property=email
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Wed, 25 Feb 2015 18:01:15 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Wed, 22 Jun 2022 08:48:27 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '2198'
+      - '473'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71f3b99a585cee2f-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 99968902-f75b-4276-82a4-f02a7d574d6e
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498519'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '124'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B620277EACB548D16F9FF30F77EA8A3C525865DFE000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=1TsIanYm6FEh7JWaPD2MAepbJs%2BNIK%2BDCqgNTEEKEBAY%2BQKxOqb%2BPkFqaIEfmqD7mr6hGUbmaoKkAZ6pQpzPkFz43p9W6IMHj1x9gqC4YkEvX9htHGvCgkqKa5NYRRAWM05c6IRhvxf8npWJ"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"contacts":[{"addedAt":1424576253177,"vid":154835,"canonical-vid":154835,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mPsPrn5f50fFJo6brWUCm8XpqwOtY7P1Tw8UdnovPMuzcoeM89FsICT0CKVD82IP6I3a0DOw4cD6zLtu2_6-nEdtudDQSp3bCkDAYzWGzI83CTpfQtvkbS9a5mmAeT41yNmEbqd","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mPsPrn5f50fFJo6brWUCm8XpqwOtY7P1Tw8UdnovPMuzcoeM89FsICT0CKVD82IP6I3a0DOw4cD6zLtu2_6-nEdtudDQSp3bCkDAYzWGzI83CTpfQtvkbS9a5mmAeT41yNmEbqd/","properties":{"lastmodifieddate":{"value":"1423205608157"},"email":{"value":"test@hubspot.com"}},"form-submissions":[{"conversion-id":"b18f9fd8-b8d3-49e5-898a-ac301fac93e9","timestamp":1405347851180,"form-id":"b844ad5e-32bd-41e1-b0e6-ed990c5f3d1b","portal-id":62515,"page-url":"http://demo.hubapi.com/your-stunning-headline-30","page-title":"Your
-        stunning headline!","page-id":"324527","title":"My New Form","meta-data":[]}],"identity-profiles":[{"vid":154835,"saved-at-timestamp":1405347851237,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"test@hubspot.com","timestamp":1405347851180},{"type":"LEAD_GUID","value":"c8f20860-d3d6-4b57-b092-86a07cebdcbc","timestamp":1405347851237}]}],"merge-audits":[]},{"addedAt":1424576253203,"vid":196182,"canonical-vid":196182,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mMixSGf2vahKA2nu31ePZFfvGFKnuyXeCuaRy5B6KNo1hTyuMWyuJhAy1lnzLto0-KWEhKPyzThuOuVt8OLYhn9Hk9V3VZQpcMUGRl7_mwih-aEPhRRr-gjfgncMVXsXPOvYPde","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mMixSGf2vahKA2nu31ePZFfvGFKnuyXeCuaRy5B6KNo1hTyuMWyuJhAy1lnzLto0-KWEhKPyzThuOuVt8OLYhn9Hk9V3VZQpcMUGRl7_mwih-aEPhRRr-gjfgncMVXsXPOvYPde/","properties":{"lastmodifieddate":{"value":"1423205607564"},"email":{"value":"curtis.romig@bryancave.com"}},"form-submissions":[],"identity-profiles":[{"vid":196182,"saved-at-timestamp":1390569372699,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"curtis.romig@bryancave.com","timestamp":1390568725415},{"type":"LEAD_GUID","value":"e18dc184-0238-48f1-a8a2-4476733f50d3","timestamp":1390569372641}]}],"merge-audits":[]}],"has-more":true,"vid-offset":196182}'
-    http_version: 
-  recorded_at: Wed, 25 Feb 2015 18:01:14 GMT
+      encoding: ASCII-8BIT
+      string: '{"contacts":[{"addedAt":1655887691378,"vid":66701,"canonical-vid":66701,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887705035"},"email":{"value":"e78c2d8f19020126430286425ebc6bc9@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66701,"saved-at-timestamp":1655887691005,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"e78c2d8f19020126430286425ebc6bc9@hubspot.com","timestamp":1655887690923,"is-primary":true},{"type":"LEAD_GUID","value":"a9965081-502a-43ae-bf74-b2f301294b1a","timestamp":1655887691001}]}],"merge-audits":[]},{"addedAt":1655887691971,"vid":66751,"canonical-vid":66751,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887704020"},"email":{"value":"69fc396365f810571f1371f82d7dc808@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66751,"saved-at-timestamp":1655887691612,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"69fc396365f810571f1371f82d7dc808@hubspot.com","timestamp":1655887691584,"is-primary":true},{"type":"LEAD_GUID","value":"7b0eb208-9cd0-4065-82bd-af75723dca55","timestamp":1655887691606}]}],"merge-audits":[]}],"has-more":true,"vid-offset":66801}'
+  recorded_at: Wed, 22 Jun 2022 08:48:27 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists/1?hapikey=demo
+    uri: https://api.hubapi.com/contacts/v1/lists/1506?hapikey=<HAPI_KEY>
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Wed, 25 Feb 2015 18:01:15 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Wed, 22 Jun 2022 08:48:27 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '439'
+      - '294'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71f3b99caf4fee1b-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 7535a002-db65-4573-b054-ce47bd4da88c
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498518'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '123'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B10AD5F41B73C2F955C716A9264F4A75227DC35ED000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2Mn6qCuPOdGGDwg0bp4DhiCHjSnogjZjszKl3ACYvmD8hP9%2FLyCZDs2JuqYsuGivX4Cf7zODph%2Bny9bxRPAVNAmY5rm%2BfvKjmWkgj0RSoABfhIzBpWuKpiq8uObXOxsC8LhE1UDkxe6JOBL9"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"metaData":{"processing":"DONE","error":"","lastProcessingStateChangeAt":1424576267785,"lastSizeChangeAt":1424834705600,"size":3363},"dynamic":true,"filters":[[{"operator":"IS_NOT_EMPTY","type":"string","filterFamily":"PropertyValue","withinTimeMode":"PAST","property":"twitterhandle"}]],"listId":1,"portalId":62515,"createdAt":1335448813688,"updatedAt":1424575262863,"listType":"DYNAMIC","internalListId":97398,"name":"update
-        list name"}'
-    http_version: 
-  recorded_at: Wed, 25 Feb 2015 18:01:14 GMT
+      encoding: ASCII-8BIT
+      string: '{"portalId":<PORTAL_ID>,"listId":1506,"internalListId":1506,"createdAt":1655887677391,"updatedAt":1655887677391,"name":"contacts
+        list 6b17301d89a73db33b05d5fb8b319f5b","listType":"STATIC","parentId":0,"filters":[],"metaData":{"size":25,"lastSizeChangeAt":1655887707547,"processing":"DONE","lastProcessingStateChangeAt":1655887690705,"error":"","listReferencesCount":null,"parentFolderId":0},"archived":false,"teamIds":[],"dynamic":false}'
+  recorded_at: Wed, 22 Jun 2022 08:48:27 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists/1/contacts/all?count=4&hapikey=demo&property=email
+    uri: https://api.hubapi.com/contacts/v1/lists/1506/contacts/all?count=4&hapikey=<HAPI_KEY>&property=email
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Wed, 25 Feb 2015 18:01:15 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Wed, 22 Jun 2022 08:48:28 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '4036'
+      - '646'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71f3b99e3f8299eb-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 70e40483-fe3d-43ff-9eec-5638f7be7cff
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498517'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '122'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BA4442D1729E3157477E8A88F60DAF10D2739509C000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=N%2FqhDGl%2Bo%2FEcT01nMPi6MZRmcVjpriTmhKmzdPmNJI3jCMw3ZyEx11x6V5UwCAd41OwBlJU3%2Fcu5Vr8EOusvSvSl2Tb9eExFLf%2Fub6WbIwBV2hGUxfiHKwQOVnqIjYdyWkwiTx8qhGcblVq0"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"contacts":[{"addedAt":1424576253177,"vid":154835,"canonical-vid":154835,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mNj12rtbZDiwocvkm6i1OD9Y3F6fZ0pP-P_dSnXjve3NOeYp5OgZYQiIfCTDxUMNCQqAIF0j0qbjfUGyU9uo1mx0ogRf8aOHlvdeM6MK--7OuMfCF0gZqh_qaQTmzePvj2qGgWo","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mNj12rtbZDiwocvkm6i1OD9Y3F6fZ0pP-P_dSnXjve3NOeYp5OgZYQiIfCTDxUMNCQqAIF0j0qbjfUGyU9uo1mx0ogRf8aOHlvdeM6MK--7OuMfCF0gZqh_qaQTmzePvj2qGgWo/","properties":{"lastmodifieddate":{"value":"1423205608157"},"email":{"value":"test@hubspot.com"}},"form-submissions":[{"conversion-id":"b18f9fd8-b8d3-49e5-898a-ac301fac93e9","timestamp":1405347851180,"form-id":"b844ad5e-32bd-41e1-b0e6-ed990c5f3d1b","portal-id":62515,"page-url":"http://demo.hubapi.com/your-stunning-headline-30","page-title":"Your
-        stunning headline!","page-id":"324527","title":"My New Form","meta-data":[]}],"identity-profiles":[{"vid":154835,"saved-at-timestamp":1405347851237,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"test@hubspot.com","timestamp":1405347851180},{"type":"LEAD_GUID","value":"c8f20860-d3d6-4b57-b092-86a07cebdcbc","timestamp":1405347851237}]}],"merge-audits":[]},{"addedAt":1424576253203,"vid":196182,"canonical-vid":196182,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mPdCAOrB47G0Cp2oXDBTeUPJ6xxrDQtZ-pWTiU_H8Nj5irplUtZY_7YnDBvKML8MY4MPVswQ9oWiz4dLSNToJgUE99RgR-5WblB586H3Nox30hQPbRB_MYiY3bTk3W8tqIOaFzc","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mPdCAOrB47G0Cp2oXDBTeUPJ6xxrDQtZ-pWTiU_H8Nj5irplUtZY_7YnDBvKML8MY4MPVswQ9oWiz4dLSNToJgUE99RgR-5WblB586H3Nox30hQPbRB_MYiY3bTk3W8tqIOaFzc/","properties":{"lastmodifieddate":{"value":"1423205607564"},"email":{"value":"curtis.romig@bryancave.com"}},"form-submissions":[],"identity-profiles":[{"vid":196182,"saved-at-timestamp":1390569372699,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"curtis.romig@bryancave.com","timestamp":1390568725415},{"type":"LEAD_GUID","value":"e18dc184-0238-48f1-a8a2-4476733f50d3","timestamp":1390569372641}]}],"merge-audits":[]},{"addedAt":1424576253213,"vid":196186,"canonical-vid":196186,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mPqhHl_9zk12snMf7Wq7XxlUTlbCOw2RjBVRXT8HWlYjiofIbB_3afpiK_TEprzJxEbc67HzlsQU_eMBi4O4ceU-MRJsUEyRyMe2GzwVYmFcpF1Vbs0Qvssx-VKNXdjcJZDo1fr","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mPqhHl_9zk12snMf7Wq7XxlUTlbCOw2RjBVRXT8HWlYjiofIbB_3afpiK_TEprzJxEbc67HzlsQU_eMBi4O4ceU-MRJsUEyRyMe2GzwVYmFcpF1Vbs0Qvssx-VKNXdjcJZDo1fr/","properties":{"lastmodifieddate":{"value":"1423205608022"},"email":{"value":"ben@synaxisworks.com"}},"form-submissions":[],"identity-profiles":[{"vid":196186,"saved-at-timestamp":1390569372769,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"ben@synaxisworks.com","timestamp":1390568759222},{"type":"LEAD_GUID","value":"c0981af6-1d44-4375-a425-f880cef2fd83","timestamp":1390569372756}]}],"merge-audits":[]},{"addedAt":1424576253220,"vid":196189,"canonical-vid":196189,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mPYGyVMUv7Ffs8T2W9GwcYsiFUN3z_xppxUbq80B7i-oFGG0BhCdlrwxjGyN2wGCEfTdcTl2Xhi23ppiQwhcAxs5XHULyo9wfL8u8G24yk7vcRnxL2dQEF1bxLC89N1nx2ikKc_","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mPYGyVMUv7Ffs8T2W9GwcYsiFUN3z_xppxUbq80B7i-oFGG0BhCdlrwxjGyN2wGCEfTdcTl2Xhi23ppiQwhcAxs5XHULyo9wfL8u8G24yk7vcRnxL2dQEF1bxLC89N1nx2ikKc_/","properties":{"lastmodifieddate":{"value":"1414183436568"},"email":{"value":"glennbachman@att.net"}},"form-submissions":[],"identity-profiles":[{"vid":196189,"saved-at-timestamp":1390569372781,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"glennbachman@att.net","timestamp":1390568755598},{"type":"LEAD_GUID","value":"f97a9531-2780-4a53-bed1-3659c58e1b98","timestamp":1390569372775}]}],"merge-audits":[]}],"has-more":true,"vid-offset":196189}'
-    http_version: 
-  recorded_at: Wed, 25 Feb 2015 18:01:15 GMT
+      encoding: ASCII-8BIT
+      string: '{"contacts":[{"addedAt":1655887691378,"vid":66701,"canonical-vid":66701,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887705035"},"email":{"value":"e78c2d8f19020126430286425ebc6bc9@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66701,"saved-at-timestamp":1655887691005,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"e78c2d8f19020126430286425ebc6bc9@hubspot.com","timestamp":1655887690923,"is-primary":true},{"type":"LEAD_GUID","value":"a9965081-502a-43ae-bf74-b2f301294b1a","timestamp":1655887691001}]}],"merge-audits":[]},{"addedAt":1655887691971,"vid":66751,"canonical-vid":66751,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887704020"},"email":{"value":"69fc396365f810571f1371f82d7dc808@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66751,"saved-at-timestamp":1655887691612,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"69fc396365f810571f1371f82d7dc808@hubspot.com","timestamp":1655887691584,"is-primary":true},{"type":"LEAD_GUID","value":"7b0eb208-9cd0-4065-82bd-af75723dca55","timestamp":1655887691606}]}],"merge-audits":[]},{"addedAt":1655887692593,"vid":66801,"canonical-vid":66801,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887704495"},"email":{"value":"0d644fb1a9cf9545d1e1b6c96a4b01a4@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66801,"saved-at-timestamp":1655887692198,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"0d644fb1a9cf9545d1e1b6c96a4b01a4@hubspot.com","timestamp":1655887692185,"is-primary":true},{"type":"LEAD_GUID","value":"8676a486-89d2-4c4c-a515-b1bdfc04a511","timestamp":1655887692194}]}],"merge-audits":[]},{"addedAt":1655887693165,"vid":66851,"canonical-vid":66851,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887706718"},"email":{"value":"7704585cdfaa43eb276e617eebdf3922@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66851,"saved-at-timestamp":1655887692825,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"7704585cdfaa43eb276e617eebdf3922@hubspot.com","timestamp":1655887692797,"is-primary":true},{"type":"LEAD_GUID","value":"a0723261-0040-4590-95f2-75cdde69b707","timestamp":1655887692821}]}],"merge-audits":[]}],"has-more":true,"vid-offset":66852}'
+  recorded_at: Wed, 22 Jun 2022 08:48:28 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/contacts/v1/lists/1/contacts/all?count=2&hapikey=demo&offset=2&property=email
+    uri: https://api.hubapi.com/contacts/v1/lists/1506/contacts/all?count=2&hapikey=<HAPI_KEY>&offset=2&property=email
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
       Date:
-      - Wed, 25 Feb 2015 18:01:16 GMT
-      Vary:
-      - Accept-Encoding
-      - Accept-Encoding
+      - Wed, 22 Jun 2022 08:48:28 GMT
+      Content-Type:
+      - application/json;charset=utf-8
       Content-Length:
-      - '2198'
+      - '473'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71f3b99ffc163a3b-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - f2ea3a84-7078-43c1-af22-3954d1e96076
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498516'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '121'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2BCDD081B48155965ADDC435120F9CE7A59F03DAAA000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Tq4XN0rDLyTjSlDSyKsMjFDUfh3yzN%2B%2BkiqSH0idD5w26BEHWLwV2BqPX8k7vbx2GoNO9Oat63w0x4g7MyaHHu7UCEwvkhDgICBCQBgc7UyvD4E9T3U%2BXxONU%2BZVtQR%2BiBFgFw3L17Dx4hZ%2F"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"contacts":[{"addedAt":1424576253177,"vid":154835,"canonical-vid":154835,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mPs8zM_beF76ELIVmemK5JnblmjP8vVdXlBaGgpigYoFWnOgfNmlTXmX5WDCIajgNJ9ITjbqK6roOHSigYvLGMomWteah-64zRjZETbBEyBiPtzgP85hCV6bBjUtajPJYnN2u3-","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mPs8zM_beF76ELIVmemK5JnblmjP8vVdXlBaGgpigYoFWnOgfNmlTXmX5WDCIajgNJ9ITjbqK6roOHSigYvLGMomWteah-64zRjZETbBEyBiPtzgP85hCV6bBjUtajPJYnN2u3-/","properties":{"lastmodifieddate":{"value":"1423205608157"},"email":{"value":"test@hubspot.com"}},"form-submissions":[{"conversion-id":"b18f9fd8-b8d3-49e5-898a-ac301fac93e9","timestamp":1405347851180,"form-id":"b844ad5e-32bd-41e1-b0e6-ed990c5f3d1b","portal-id":62515,"page-url":"http://demo.hubapi.com/your-stunning-headline-30","page-title":"Your
-        stunning headline!","page-id":"324527","title":"My New Form","meta-data":[]}],"identity-profiles":[{"vid":154835,"saved-at-timestamp":1405347851237,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"test@hubspot.com","timestamp":1405347851180},{"type":"LEAD_GUID","value":"c8f20860-d3d6-4b57-b092-86a07cebdcbc","timestamp":1405347851237}]}],"merge-audits":[]},{"addedAt":1424576253203,"vid":196182,"canonical-vid":196182,"merged-vids":[],"portal-id":62515,"is-contact":true,"profile-token":"AO_T-mM1WXp164C9aPPoZicEAEPvVfhpz62MOO6jSh_7VmcvN-qgpWUWA6abHP8PIIDfK3GodPs6KnsGujxJtY8lUkUkmeh3q8NhkDtolEh6zdndTJ_MbHVr7kzEvoUeB0MZiyJi6FAF","profile-url":"https://app.hubspot.com/contacts/62515/lists/public/contact/_AO_T-mM1WXp164C9aPPoZicEAEPvVfhpz62MOO6jSh_7VmcvN-qgpWUWA6abHP8PIIDfK3GodPs6KnsGujxJtY8lUkUkmeh3q8NhkDtolEh6zdndTJ_MbHVr7kzEvoUeB0MZiyJi6FAF/","properties":{"lastmodifieddate":{"value":"1423205607564"},"email":{"value":"curtis.romig@bryancave.com"}},"form-submissions":[],"identity-profiles":[{"vid":196182,"saved-at-timestamp":1390569372699,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"curtis.romig@bryancave.com","timestamp":1390568725415},{"type":"LEAD_GUID","value":"e18dc184-0238-48f1-a8a2-4476733f50d3","timestamp":1390569372641}]}],"merge-audits":[]}],"has-more":true,"vid-offset":196182}'
-    http_version: 
-  recorded_at: Wed, 25 Feb 2015 18:01:16 GMT
-recorded_with: VCR 2.4.0
+      encoding: ASCII-8BIT
+      string: '{"contacts":[{"addedAt":1655887691378,"vid":66701,"canonical-vid":66701,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887705035"},"email":{"value":"e78c2d8f19020126430286425ebc6bc9@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66701,"saved-at-timestamp":1655887691005,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"e78c2d8f19020126430286425ebc6bc9@hubspot.com","timestamp":1655887690923,"is-primary":true},{"type":"LEAD_GUID","value":"a9965081-502a-43ae-bf74-b2f301294b1a","timestamp":1655887691001}]}],"merge-audits":[]},{"addedAt":1655887691971,"vid":66751,"canonical-vid":66751,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"lastmodifieddate":{"value":"1655887704020"},"email":{"value":"69fc396365f810571f1371f82d7dc808@hubspot.com"}},"form-submissions":[],"identity-profiles":[{"vid":66751,"saved-at-timestamp":1655887691612,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"69fc396365f810571f1371f82d7dc808@hubspot.com","timestamp":1655887691584,"is-primary":true},{"type":"LEAD_GUID","value":"7b0eb208-9cd0-4065-82bd-af75723dca55","timestamp":1655887691606}]}],"merge-audits":[]}],"has-more":true,"vid-offset":66801}'
+  recorded_at: Wed, 22 Jun 2022 08:48:28 GMT
+recorded_with: VCR 6.1.0

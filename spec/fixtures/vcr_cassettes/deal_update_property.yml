@@ -1,40 +1,149 @@
 ---
 http_interactions:
 - request:
-    method: put
-    uri: https://api.hubapi.com/deals/v1/properties/named/my_new_property?hapikey=demo
+    method: post
+    uri: https://api.hubapi.com/deals/v1/properties/?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"name":"my_new_property","groupName":"dealinformation","description":"What
-        is their favorite flavor?","fieldType":"text","formField":true,"type":"string","displayOrder":0,"label":"This
-        is my new property","options":[{"description":"","value":"Over $50K","label":"Over
-        $50K","hidden":false,"displayOrder":0},{"description":"","value":"Under $50K","label":"Under
-        $50K","hidden":false,"displayOrder":1}]}'
+      string: '{"name":"my_new_property_dca08d2101474b85dc35a61ab1f21541","groupName":"dealinformation","description":"How
+        much money do you have?","fieldType":"text","formField":true,"type":"string","displayOrder":0,"label":"This
+        is my new property","options":[]}'
     headers:
       Content-Type:
       - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Content-Type:
-      - application/json; charset=UTF-8
-      Content-Length:
-      - '645'
       Date:
-      - Tue, 05 Jan 2016 22:51:38 GMT
+      - Wed, 22 Jun 2022 08:49:25 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '509'
       Connection:
       - keep-alive
+      Cf-Ray:
+      - 71f3bb07ebfd3b5b-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 534b35db-55a3-4827-a1d2-5a69848168d9
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498354'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '128'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B9289C96AD620B6F026DD85142F291BAC696887AD000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jvsCEvsVgOJq7pRVqcEVxVEjOa4rV7TbiPUsou7a4z8nXjq8pD6aVOe%2BV9aF9YTQqiXSARpwvUimXFyaStY%2BayRLwLapeK7RxEsabBbRg6HawDTr0i%2B4OSyFMD1bb4JTEH9uAmcWUfFj6bpP"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"my_new_property_dca08d2101474b85dc35a61ab1f21541","label":"This
+        is my new property","description":"How much money do you have?","groupName":"dealinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"deleted":false,"updatedAt":1655887765824,"createdAt":1655887765824,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"formField":true,"displayOrder":0,"readOnlyValue":false,"readOnlyDefinition":false,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"mutableDefinitionNotDeletable":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"updatedUserId":null,"isCustomizedDefault":false}'
+  recorded_at: Wed, 22 Jun 2022 08:49:25 GMT
+- request:
+    method: put
+    uri: https://api.hubapi.com/deals/v1/properties/named/my_new_property_dca08d2101474b85dc35a61ab1f21541?hapikey=<HAPI_KEY>
     body:
       encoding: UTF-8
-      string: '{"name":"my_new_property","label":"This is my new property","description":"What
-        is their favorite flavor?","groupName":"dealinformation","type":"string","fieldType":"text","formField":true,"displayOrder":0,"readOnlyValue":false,"readOnlyDefinition":false,"hidden":false,"mutableDefinitionNotDeletable":false,"calculated":false,"externalOptions":false,"displayMode":"current_value","options":[{"description":"","label":"Over
-        $50K","displayOrder":0,"hidden":false,"doubleData":null,"readOnly":null,"value":"Over
-        $50K"},{"description":"","label":"Under $50K","displayOrder":1,"hidden":false,"doubleData":null,"readOnly":null,"value":"Under
-        $50K"}]}'
-    http_version: 
-  recorded_at: Tue, 05 Jan 2016 22:51:38 GMT
-recorded_with: VCR 2.4.0
+      string: '{"name":"my_new_property_dca08d2101474b85dc35a61ab1f21541","groupName":"dealinformation","description":"What
+        is their favorite flavor?","fieldType":"text","formField":true,"type":"string","displayOrder":0,"label":"This
+        is my new property","options":[]}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 22 Jun 2022 08:49:26 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '489'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 71f3bb097bb339e1-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - e0497a18-bd9b-4885-a615-9bd600f0a441
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498353'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '127'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '12'
+      X-Trace:
+      - 2B474716CBC08046D15C15E77A8F73ABE38E34D2F7000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=06ZT5HGRVB0tFAxV3VeAS5gONqSDtC1Oyx2JLYc3dun1Bb9EPIJVlW46Cf%2BoS0OIKBNBsd%2F5Kmm9f79o1jXo3TzzisITJqINFyl%2FjHGBXSrmK46fPAgD2w%2BvclXjV%2BXfifGYzSmDu7B%2FYVUV"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"name":"my_new_property_dca08d2101474b85dc35a61ab1f21541","label":"This
+        is my new property","description":"What is their favorite flavor?","groupName":"dealinformation","type":"string","fieldType":"text","fieldLevelPermission":null,"options":[],"deleted":null,"updatedAt":null,"createdAt":null,"referencedObjectType":null,"externalOptionsReferenceType":null,"optionSortStrategy":null,"formField":true,"displayOrder":0,"readOnlyValue":false,"readOnlyDefinition":false,"createdUserId":null,"searchableInGlobalSearch":false,"hasUniqueValue":false,"numberDisplayHint":null,"mutableDefinitionNotDeletable":false,"displayMode":"current_value","showCurrencySymbol":null,"hubspotDefined":null,"hidden":false,"favorited":false,"favoritedOrder":-1,"calculated":false,"externalOptions":false,"currencyPropertyName":null,"textDisplayHint":null,"optionsAreMutable":null,"searchTextAnalysisMode":null,"updatedUserId":null,"isCustomizedDefault":false}'
+  recorded_at: Wed, 22 Jun 2022 08:49:26 GMT
+recorded_with: VCR 6.1.0

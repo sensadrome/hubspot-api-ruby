@@ -6,48 +6,66 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
       message: OK
     headers:
       Date:
-      - Sat, 04 May 2019 14:44:14 GMT
+      - Wed, 22 Jun 2022 08:47:46 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
       - chunked
       Connection:
       - keep-alive
-      Set-Cookie:
-      - __cfduid=da3c189233ce9174020f84d64b974f1a11556981053; expires=Sun, 03-May-20
-        14:44:13 GMT; path=/; domain=.hubapi.com; HttpOnly
-      X-Trace:
-      - 2B12A7F41B26EA82C225E6A14DC19C868B4CCE8A62000000000000000000
-      X-Hubspot-Ratelimit-Daily:
-      - '1000000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '979519'
-      X-Hubspot-Ratelimit-Secondly:
-      - '60'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '59'
-      Vary:
-      - Accept-Encoding, User-Agent
-      Access-Control-Allow-Credentials:
-      - 'false'
+      Cf-Ray:
+      - 71f3b89b1e4a3b7f-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 8b76c7b5-bde0-4c5d-8be2-ac90e6273c6c
+      X-Hubspot-Ratelimit-Daily:
+      - '500000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '498599'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '150'
+      X-Hubspot-Ratelimit-Remaining:
+      - '116'
+      X-Hubspot-Ratelimit-Secondly:
+      - '15'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '11'
+      X-Trace:
+      - 2BCA8E33CCA25F84C1E26B6105D14A8D0F6D81DDEA000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=yXRLBVUV4bR%2B%2FgRnayP5XTlLK6FBZetP60mq9iqS%2BsumyH7%2B2cfBh%2BBBsfj5jDy39e1CBd%2B6qTozapJVErFoJQyhk%2BAqE2bBVXZiFrPNd%2F%2FBycYYkmwZj7VA1njn62Ik2A4YJYxVKwTAQBGS"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
       - cloudflare
-      Cf-Ray:
-      - 4d1b40636b56573f-IAD
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
-      encoding: UTF-8
-      string: '{"has-more":true,"offset":117000761,"companies":[{"portalId":62515,"companyId":117000761,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}]}'
-    http_version: 
-  recorded_at: Sat, 04 May 2019 14:44:14 GMT
-recorded_with: VCR 4.0.0
+      encoding: ASCII-8BIT
+      string: '{"has-more":true,"offset":8934083658,"companies":[{"portalId":<PORTAL_ID>,"companyId":8934083657,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}]}'
+  recorded_at: Wed, 22 Jun 2022 08:47:46 GMT
+recorded_with: VCR 6.1.0

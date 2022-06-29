@@ -10,7 +10,6 @@ module Hubspot
     RECENT_CONTACTS_PATH = LIST_PATH + '/contacts/recent'
     ADD_CONTACT_PATH     = LIST_PATH + '/add'
     REMOVE_CONTACT_PATH  = LIST_PATH + '/remove'
-    REFRESH_PATH         = LIST_PATH + '/refresh'
 
     class << self
       # {http://developers.hubspot.com/docs/methods/lists/create_list}
@@ -90,12 +89,6 @@ module Hubspot
       else
         @contacts
       end
-    end
-
-    # {http://developers.hubspot.com/docs/methods/lists/refresh_list}
-    def refresh
-      response = Hubspot::Connection.post_json(REFRESH_PATH, params: { list_id: @id, no_parse: true }, body: {})
-      response.code == 204
     end
 
     # {http://developers.hubspot.com/docs/methods/lists/add_contact_to_list}
