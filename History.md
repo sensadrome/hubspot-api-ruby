@@ -1,4 +1,4 @@
-## Next release
+## 0.10.0
 
   * API keys (`hapikey`) are deprecated. Please use `access_token`s. #7
 
