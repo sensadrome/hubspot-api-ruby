@@ -2,11 +2,13 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.hubapi.com/filemanager/api/v2/files/5323360053?hapikey=demo
+    uri: https://api.hubapi.com/filemanager/api/v2/files/81421334089
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -19,15 +21,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 22 Jun 2022 08:49:52 GMT
+      - Mon, 08 Aug 2022 14:52:08 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '499'
+      - '539'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 71f3bbb05a84084b-CDG
+      - 737912f6ffa43a41-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -39,25 +41,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - d9c72627-421e-4766-b98e-c2deec83c4a5
+      - 3fe145e9-065e-43a6-9432-203dd7ea2150
       X-Hubspot-Ratelimit-Daily:
-      - '1000000'
+      - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '994116'
+      - '248186'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
-      - '200'
+      - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '198'
+      - '77'
       X-Hubspot-Ratelimit-Secondly:
-      - '20'
+      - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '19'
+      - '7'
       X-Trace:
-      - 2B7894D68A4BA5E06F0CDBF1B867699295EF12F07A000000000000000000
+      - 2B6DC216C54F5E385721A3358C42FA67D5D52A9ACB000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=61xENVDlY%2FY1b%2BOoPKcPkUK3BcpKybodsUDQ2YIH4aCqnXgpd%2BRm0%2F%2BUCA7Ruan5vyOzmR%2BRcksUiI7RcacEIY%2Fme35CUaiXniPuYARbUkzIoEqSpPzI%2BP7WMZFZ%2BhjOhfy0sx5HOyTB4IXc"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lkoMBYPOu%2BWm6CfxlvRrjVGFhSC0v14FuiMLku7OpW8DZ4nVeXThbINi7RxvGMzZ3AS2Re8eMsz5pnP7q9V53AL86FkbnFCssj9YO882Dl6v1kg05fyXQ9ffJSZJx%2FyFqy07BFJnK1dsCLzg"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -66,6 +68,6 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"id":5323360053,"portal_id":62515,"name":"ScrollMagic","size":35938,"height":null,"width":null,"encoding":null,"type":"OTHER","extension":"js","cloud_key":"hubfs/62515/plugins/scrollmagic/uncompressed/ScrollMagic.js","s3_url":"http://cdn1.hubspot.com/hubfs/62515/plugins/scrollmagic/uncompressed/ScrollMagic.js","friendly_url":"https://62515.fs1.hubspotusercontent-na1.net/hubfs/62515/plugins/scrollmagic/uncompressed/ScrollMagic.js","alt_key":"hubfs/62515/plugins/scrollmagic/uncompressed/scrollmagic","alt_key_hash":"1769708800fd59e887ec299715cd6118","title":"ScrollMagic","meta":{"url_scheme":"SIMPLIFIED","allows_anonymous_access":true},"created":1504354553352,"updated":1504354553453,"deleted_at":0,"folder_id":5323360027,"hidden":false,"cloud_key_hash":"8bd641bca694eef1e2c47dc8eefc3ea3","archived":false,"created_by":null,"deleted_by":null,"replaceable":true,"default_hosting_url":"https://62515.fs1.hubspotusercontent-na1.net/hubfs/62515/plugins/scrollmagic/uncompressed/ScrollMagic.js","teams":[],"is_indexable":true,"url":"https://62515.fs1.hubspotusercontent-na1.net/hubfs/62515/plugins/scrollmagic/uncompressed/ScrollMagic.js","cdn_purge_embargo_time":null,"file_hash":null}'
-  recorded_at: Wed, 22 Jun 2022 08:49:52 GMT
-recorded_with: VCR 6.1.0
+      string: '{"id":81421334089,"portal_id":<PORTAL_ID>,"name":"null-Aug-08-2022-02-52-07-87-PM","size":0,"height":null,"width":null,"encoding":null,"type":"OTHER","extension":"","cloud_key":"hubfs/<PORTAL_ID>/null-Aug-08-2022-02-52-07-87-PM","s3_url":"http://cdn1.hubspot.com/hubfs/<PORTAL_ID>/null-Aug-08-2022-02-52-07-87-PM","friendly_url":"https://<PORTAL_ID>.fs1.hubspotusercontent-na1.net/hubfs/<PORTAL_ID>/null-Aug-08-2022-02-52-07-87-PM","alt_key":"hubfs/<PORTAL_ID>/null-aug-08-2022-02-52-07-87-pm","alt_key_hash":"996963769f33b40ba0db72bac816d2a2","title":"null-Aug-08-2022-02-52-07-87-PM","meta":{"url_scheme":"SIMPLIFIED","allows_anonymous_access":false,"expires_at":1662648727867,"indexable":false},"created":1659970327876,"updated":1659970327876,"deleted_at":0,"folder_id":null,"hidden":false,"cloud_key_hash":"e5c1d40a0f3d6a196c7b510306748736","archived":false,"created_by":3326038,"deleted_by":null,"replaceable":true,"default_hosting_url":"https://<PORTAL_ID>.fs1.hubspotusercontent-na1.net/hubfs/<PORTAL_ID>/null-Aug-08-2022-02-52-07-87-PM","teams":[],"url":"https://<PORTAL_ID>.fs1.hubspotusercontent-na1.net/hubfs/<PORTAL_ID>/null-Aug-08-2022-02-52-07-87-PM","is_indexable":false,"cdn_purge_embargo_time":null,"file_hash":"d41d8cd98f00b204e9800998ecf8427e"}'
+  recorded_at: Mon, 08 Aug 2022 14:52:08 GMT
+recorded_with: VCR 6.0.0

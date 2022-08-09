@@ -1,153 +1,14 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: https://api.hubapi.com/contacts/v1/contact?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"properties":[{"property":"email","value":"a12c55295338fb37a001617f2a8bb742@hubspot.com"}]}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:46 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '435'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3bb895e663b61-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - 1a5fa0cb-fbb6-4086-b648-9b385b792789
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498277'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '125'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '12'
-      X-Trace:
-      - 2BE5C0355025D1E21C160EBFD673FCCD79A1DFF0E5000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=2ibhFAcuS%2FjvJCfDY0P5LCs2iWyGt0xD57MG2R4eA5s627yidFz0I21HaKhZ4z4GjjyK8ClcNTxLL0GKgBX8JXSIv7PT7LugS6oK%2BRFGJVeWWzyKNmfA92si49hAs%2B8Q05WH0uvJ2Er2iyzw"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"vid":68851,"canonical-vid":68851,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"email":{"value":"a12c55295338fb37a001617f2a8bb742@hubspot.com","versions":[{"value":"a12c55295338fb37a001617f2a8bb742@hubspot.com","source-type":"API","source-id":null,"source-label":null,"updated-by-user-id":null,"timestamp":1655887786533,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":68851,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"a12c55295338fb37a001617f2a8bb742@hubspot.com","timestamp":1655887786539,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"ae814b74-13ba-4e89-8968-af7ac678a96b","timestamp":1655887786592,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
-  recorded_at: Wed, 22 Jun 2022 08:49:46 GMT
-- request:
-    method: post
-    uri: https://api.hubapi.com/engagements/v1/engagements?hapikey=<HAPI_KEY>
-    body:
-      encoding: UTF-8
-      string: '{"engagement":{"type":"NOTE"},"associations":{"contactIds":[68851]},"metadata":{"body":"foo"}}'
-    headers:
-      Content-Type:
-      - application/json
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Wed, 22 Jun 2022 08:49:47 GMT
-      Content-Type:
-      - application/json;charset=utf-8
-      Content-Length:
-      - '334'
-      Connection:
-      - keep-alive
-      Cf-Ray:
-      - 71f3bb8b9fa4a2f1-CDG
-      Strict-Transport-Security:
-      - max-age=31536000; includeSubDomains; preload
-      Vary:
-      - Accept-Encoding
-      Cf-Cache-Status:
-      - DYNAMIC
-      Access-Control-Allow-Credentials:
-      - 'false'
-      Expect-Ct:
-      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-      X-Hubspot-Correlation-Id:
-      - ceffcab0-d49c-4d65-a238-b3828d910a15
-      X-Hubspot-Ratelimit-Daily:
-      - '500000'
-      X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498276'
-      X-Hubspot-Ratelimit-Interval-Milliseconds:
-      - '10000'
-      X-Hubspot-Ratelimit-Max:
-      - '150'
-      X-Hubspot-Ratelimit-Remaining:
-      - '124'
-      X-Hubspot-Ratelimit-Secondly:
-      - '15'
-      X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '12'
-      X-Trace:
-      - 2B8D6AC888909476BAEE507E3E86A5FB667B0D45A4000000000000000000
-      Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mlDZE8k7f6NKzPqs1uwnXxvPsW%2FosPqXPOxs9kGLCe07mTFapAFhvAH%2FE9XRa%2Bm3Jops6yFNAJUVpUwyjBHa974LdFA8PTI3pVINdRg%2F5j%2B%2BhHg6FaM5ddw%2B%2B%2FoLHKEDLVOwd704nbLMdr0N"}],"group":"cf-nel","max_age":604800}'
-      Nel:
-      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
-      Server:
-      - cloudflare
-      Alt-Svc:
-      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
-    body:
-      encoding: ASCII-8BIT
-      string: '{"associationCreateFailures":[],"engagement":{"id":22885644559,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655887786898,"lastUpdated":1655887786898,"type":"NOTE","timestamp":1655887786898,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[68851],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}}'
-  recorded_at: Wed, 22 Jun 2022 08:49:46 GMT
-- request:
     method: get
-    uri: https://api.hubapi.com/engagements/v1/engagements/paged?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/engagements/v1/engagements/paged
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -160,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 22 Jun 2022 08:49:48 GMT
+      - Mon, 08 Aug 2022 14:51:58 GMT
       Content-Type:
       - application/json;charset=utf-8
       Transfer-Encoding:
@@ -168,7 +29,7 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 71f3bb8d2d0899e8-CDG
+      - 737912b92d1132b1-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -180,25 +41,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 165c37b8-d07d-44ab-82c5-3da7ae9c0bca
+      - bf182536-77db-48cc-a649-93d32e68023d
       X-Hubspot-Ratelimit-Daily:
-      - '500000'
+      - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498275'
+      - '248210'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
-      - '150'
+      - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '123'
+      - '78'
       X-Hubspot-Ratelimit-Secondly:
-      - '15'
+      - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '12'
+      - '7'
       X-Trace:
-      - 2B685615D92042E8CDB49969A7FB6F4C46D11F971F000000000000000000
+      - 2BCB9C4CCC915BA5F0082A00B560744D670CB13BBB000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=j5F0%2Btj%2F9JmZCbi3rwOD7ED02ffhhtXbvjpI8zTCaEgCQQTnZRz%2FwCQ2cyZD0HuvxZojJCVOL6GdjbaZz3G4mLFUvF61h8p9is5m%2BhqGXOifZu9roJzKoWoQodbOzr7O0Yx2eA73GHcffpVO"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=MyRzc1wTN6IYLKTn71gQ9DdBkuxM01h8Tqm7c%2Fxiwt8gTMwqkGWMZ74rY2YPTk8eZdKaLRU5lcJVVsqeEEI0BeT3NaC8%2BDfbe57h1dXrD%2Bf25Qk0MQuoCu93MiEi03zhQHlvA8SO9hZI0pEs"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -207,193 +68,51 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"results":[{"engagement":{"id":22753632614,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655457111070,"lastUpdated":1655457111070,"type":"NOTE","timestamp":1655457111070,"allAccessibleTeamIds":[],"bodyPreview":"Test
+      string: '{"results":[{"engagement":{"id":24384157319,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969575232,"lastUpdated":1659969575232,"type":"NOTE","timestamp":1659969575232,"allAccessibleTeamIds":[],"bodyPreview":"Test
         note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
         <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22753642387,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655457112830,"lastUpdated":1655457112830,"type":"NOTE","timestamp":1655457112830,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22753980161,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655457114101,"lastUpdated":1655457114482,"type":"CALL","timestamp":1655457114101,"allAccessibleTeamIds":[],"bodyPreview":"Test
+        note"}},{"engagement":{"id":24384157564,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969589983,"lastUpdated":1659969590354,"type":"CALL","timestamp":1659969589983,"allAccessibleTeamIds":[],"bodyPreview":"Test
         call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
         <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22760585113,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655474301051,"lastUpdated":1655474302273,"type":"CALL","timestamp":1655474301051,"allAccessibleTeamIds":[],"bodyPreview":"Test
+        call","title":"Call with unknown contact"}},{"engagement":{"id":24384198808,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969577682,"lastUpdated":1659969577682,"type":"NOTE","timestamp":1659969577682,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[19701],"companyIds":[9337406602],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":24384291358,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969585381,"lastUpdated":1659969585381,"type":"NOTE","timestamp":1659969585381,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[19801],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":24384342397,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659970317770,"lastUpdated":1659970317770,"type":"NOTE","timestamp":1659970317770,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[23104],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":24384375209,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659970311603,"lastUpdated":1659970311603,"type":"NOTE","timestamp":1659970311603,"allAccessibleTeamIds":[],"bodyPreview":"Test
+        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
+        note"}},{"engagement":{"id":24386084115,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659970057586,"lastUpdated":1659970057846,"ownerId":156644386,"type":"MEETING","timestamp":1659970057401,"allAccessibleTeamIds":[],"bodyPreview":"hs_meeting_body","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n hs_meeting_body\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"scheduledTasks":[],"metadata":{"startTime":1651568400000,"endTime":1651569300000,"title":"hs_meeting_title","body":"hs_meeting_body","source":"CRM_UI","preMeetingProspectReminders":[],"meetingOutcome":"SCHEDULED","attendeeOwnerIds":[]}},{"engagement":{"id":24386175130,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969581710,"lastUpdated":1659969581710,"type":"NOTE","timestamp":1659969581710,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[18608],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":24386214682,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969585068,"lastUpdated":1659969585068,"type":"NOTE","timestamp":1659969585068,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[19801],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":24386214727,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969589386,"lastUpdated":1659969589828,"type":"CALL","timestamp":1659969589386,"allAccessibleTeamIds":[],"bodyPreview":"Test
         call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
         <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22760598829,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655474295372,"lastUpdated":1655474295372,"type":"NOTE","timestamp":1655474295372,"allAccessibleTeamIds":[],"bodyPreview":"Test
+        call","title":"Call with unknown contact"}},{"engagement":{"id":24386214740,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969590905,"lastUpdated":1659969591471,"type":"CALL","timestamp":1659969590905,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[19901],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":42,"body":"foo","title":"Call
+        with 93ed193d5be208f58b68e94ed6fb8dfd@hubspot.com"}},{"engagement":{"id":24386293333,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969584424,"lastUpdated":1659969584424,"type":"NOTE","timestamp":1659969584424,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[19801],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":24386313123,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969575513,"lastUpdated":1659969575513,"type":"NOTE","timestamp":1659969575513,"allAccessibleTeamIds":[],"bodyPreview":"Test
         note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
         <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22760836444,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655474295706,"lastUpdated":1655474295706,"type":"NOTE","timestamp":1655474295706,"allAccessibleTeamIds":[],"bodyPreview":"Test
+        note"}},{"engagement":{"id":24386336527,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969580121,"lastUpdated":1659969580121,"type":"NOTE","timestamp":1659969580121,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[19751],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":24386402106,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969586334,"lastUpdated":1659969586334,"type":"NOTE","timestamp":1659969586334,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[19851],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":24386465857,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659970311062,"lastUpdated":1659970311062,"type":"NOTE","timestamp":1659970311062,"allAccessibleTeamIds":[],"bodyPreview":"Test
         note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
         <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22760857143,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655474299347,"lastUpdated":1655474299347,"type":"NOTE","timestamp":1655474299347,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22760922198,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655474301362,"lastUpdated":1655474301900,"type":"CALL","timestamp":1655474301362,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22811924850,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731084299,"lastUpdated":1655731084299,"type":"NOTE","timestamp":1655731084299,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22812080909,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731475879,"lastUpdated":1655731475879,"type":"NOTE","timestamp":1655731475879,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22812099355,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731330459,"lastUpdated":1655731330459,"type":"NOTE","timestamp":1655731330459,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22812100517,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731411933,"lastUpdated":1655731411933,"type":"NOTE","timestamp":1655731411933,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22812119320,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731331817,"lastUpdated":1655731332121,"type":"CALL","timestamp":1655731331817,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22812120364,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731409772,"lastUpdated":1655731409772,"type":"NOTE","timestamp":1655731409772,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22812176290,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731520470,"lastUpdated":1655731520902,"type":"CALL","timestamp":1655731520470,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22812178451,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731667295,"lastUpdated":1655731667826,"type":"CALL","timestamp":1655731667295,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22812181157,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731847004,"lastUpdated":1655731847004,"type":"NOTE","timestamp":1655731847004,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22812181173,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731848550,"lastUpdated":1655731848550,"type":"NOTE","timestamp":1655731848550,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38101],"companyIds":[8949187085],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22812181289,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731852801,"lastUpdated":1655731852801,"type":"NOTE","timestamp":1655731852801,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38201],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22812365203,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731286937,"lastUpdated":1655731286937,"type":"NOTE","timestamp":1655731286937,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22812376155,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731978509,"lastUpdated":1655731978509,"type":"NOTE","timestamp":1655731978509,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38251],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22812376227,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731982510,"lastUpdated":1655731982510,"type":"NOTE","timestamp":1655731982510,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38401],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22812408081,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731850383,"lastUpdated":1655731850383,"type":"NOTE","timestamp":1655731850383,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38151],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813002089,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731088707,"lastUpdated":1655731089110,"type":"CALL","timestamp":1655731088707,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22813227657,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731342291,"lastUpdated":1655731342291,"type":"NOTE","timestamp":1655731342291,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22813229936,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731495784,"lastUpdated":1655731495784,"type":"NOTE","timestamp":1655731495784,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22813248182,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731478432,"lastUpdated":1655731478432,"type":"NOTE","timestamp":1655731478432,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22813289003,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731413302,"lastUpdated":1655731413530,"type":"CALL","timestamp":1655731413302,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22813305873,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731327802,"lastUpdated":1655731327802,"type":"NOTE","timestamp":1655731327802,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22813308563,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731480022,"lastUpdated":1655731480400,"type":"CALL","timestamp":1655731480022,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22813311745,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731660094,"lastUpdated":1655731660094,"type":"NOTE","timestamp":1655731660094,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22813312843,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731735661,"lastUpdated":1655731735661,"type":"NOTE","timestamp":1655731735661,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38001],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813328005,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731855321,"lastUpdated":1655731855768,"type":"CALL","timestamp":1655731855321,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22813351762,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731734044,"lastUpdated":1655731734044,"type":"NOTE","timestamp":1655731734044,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[37951],"companyIds":[8948684833],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813365004,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731515759,"lastUpdated":1655731515759,"type":"NOTE","timestamp":1655731515759,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[37651],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813367129,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731660891,"lastUpdated":1655731660891,"type":"NOTE","timestamp":1655731660891,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[37751],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813393683,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731983566,"lastUpdated":1655731983566,"type":"NOTE","timestamp":1655731983566,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38401],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813394080,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655732008567,"lastUpdated":1655732008567,"type":"NOTE","timestamp":1655732008567,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38501],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813394219,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655732013319,"lastUpdated":1655732013319,"type":"NOTE","timestamp":1655732013319,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38651],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813409165,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731853082,"lastUpdated":1655731853082,"type":"NOTE","timestamp":1655731853082,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38201],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813421868,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731284176,"lastUpdated":1655731284176,"type":"NOTE","timestamp":1655731284176,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22813422765,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731343589,"lastUpdated":1655731344132,"type":"CALL","timestamp":1655731343589,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22813430821,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731847678,"lastUpdated":1655731847678,"type":"NOTE","timestamp":1655731847678,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38051],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813434533,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655732016943,"lastUpdated":1655732017285,"type":"CALL","timestamp":1655732016943,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38751],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":42,"body":"foo","title":"Call
-        with c8249d4d051c38d2995b9ca2a4d56273@hubspot.com"}},{"engagement":{"id":22813439325,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731087163,"lastUpdated":1655731087163,"type":"NOTE","timestamp":1655731087163,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22813446049,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731514785,"lastUpdated":1655731514785,"type":"NOTE","timestamp":1655731514785,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[37601],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813575033,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731288384,"lastUpdated":1655731288711,"type":"CALL","timestamp":1655731288384,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22813583461,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731853903,"lastUpdated":1655731853903,"type":"NOTE","timestamp":1655731853903,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22813585542,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731977596,"lastUpdated":1655731977596,"type":"NOTE","timestamp":1655731977596,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22813585752,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731986581,"lastUpdated":1655731986990,"type":"CALL","timestamp":1655731986581,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38451],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":42,"body":"foo","title":"Call
-        with 9799420f2ee6490837b478c089b0f76e@hubspot.com"}},{"engagement":{"id":22813600512,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731516484,"lastUpdated":1655731516484,"type":"NOTE","timestamp":1655731516484,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[37701],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813602669,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731663053,"lastUpdated":1655731663053,"type":"NOTE","timestamp":1655731663053,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[37851],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813603489,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731733103,"lastUpdated":1655731733103,"type":"NOTE","timestamp":1655731733103,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[37901],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813619837,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731498103,"lastUpdated":1655731498103,"type":"NOTE","timestamp":1655731498103,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22813628689,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655732014143,"lastUpdated":1655732014143,"type":"NOTE","timestamp":1655732014143,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[38701],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22813638446,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731338887,"lastUpdated":1655731338887,"type":"NOTE","timestamp":1655731338887,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22813643688,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731661873,"lastUpdated":1655731661873,"type":"NOTE","timestamp":1655731661873,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[37801],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813648501,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731981049,"lastUpdated":1655731981049,"type":"NOTE","timestamp":1655731981049,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38351],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813667427,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731983811,"lastUpdated":1655731983811,"type":"NOTE","timestamp":1655731983811,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38401],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813667441,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731984460,"lastUpdated":1655731984460,"type":"NOTE","timestamp":1655731984460,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22813683972,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731731509,"lastUpdated":1655731731509,"type":"NOTE","timestamp":1655731731509,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22813689385,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655732007028,"lastUpdated":1655732007028,"type":"NOTE","timestamp":1655732007028,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22813698129,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655732016294,"lastUpdated":1655732016857,"type":"CALL","timestamp":1655732016294,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22813728592,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731979498,"lastUpdated":1655731979498,"type":"NOTE","timestamp":1655731979498,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38301],"companyIds":[8949194901],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22813728681,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731985808,"lastUpdated":1655731986358,"type":"CALL","timestamp":1655731985808,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22814375486,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655734698693,"lastUpdated":1655734699077,"ownerId":123,"type":"MEETING","timestamp":1655734698308,"allAccessibleTeamIds":[],"bodyPreview":"hs_meeting_body","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n hs_meeting_body\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"scheduledTasks":[],"metadata":{"startTime":1651568400000,"endTime":1651569300000,"title":"hs_meeting_title","body":"hs_meeting_body","source":"CRM_UI","preMeetingProspectReminders":[],"meetingOutcome":"SCHEDULED","attendeeOwnerIds":[]}},{"engagement":{"id":22815313685,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731499510,"lastUpdated":1655731500695,"type":"CALL","timestamp":1655731499510,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22815333639,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731519130,"lastUpdated":1655731519130,"type":"NOTE","timestamp":1655731519130,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22815338514,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731851897,"lastUpdated":1655731851897,"type":"NOTE","timestamp":1655731851897,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38201],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22815356191,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731514075,"lastUpdated":1655731514075,"type":"NOTE","timestamp":1655731514075,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22815358246,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731665918,"lastUpdated":1655731665918,"type":"NOTE","timestamp":1655731665918,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22815359075,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731738026,"lastUpdated":1655731738026,"type":"NOTE","timestamp":1655731738026,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22815359090,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655731739401,"lastUpdated":1655731739733,"type":"CALL","timestamp":1655731739401,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22815363937,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655732009462,"lastUpdated":1655732009462,"type":"NOTE","timestamp":1655732009462,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38551],"companyIds":[8949195565],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22815363992,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655732013042,"lastUpdated":1655732013042,"type":"NOTE","timestamp":1655732013042,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38651],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22815383088,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655732010941,"lastUpdated":1655732010941,"type":"NOTE","timestamp":1655732010941,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38601],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22815383098,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655732012093,"lastUpdated":1655732012093,"type":"NOTE","timestamp":1655732012093,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[38651],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22816000689,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655734699835,"lastUpdated":1655734700536,"ownerId":123,"type":"MEETING","timestamp":1655734699520,"allAccessibleTeamIds":[],"bodyPreview":"hs_meeting_body","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n hs_meeting_body\n </body>\n</html>"},"associations":{"contactIds":[40901],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"scheduledTasks":[],"metadata":{"startTime":1651568400000,"endTime":1651569300000,"title":"hs_meeting_title","body":"hs_meeting_body","source":"CRM_UI","preMeetingProspectReminders":[],"meetingOutcome":"SCHEDULED","attendeeOwnerIds":[]}},{"engagement":{"id":22816259212,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655734744397,"lastUpdated":1655734745094,"ownerId":123,"type":"MEETING","timestamp":1655734744087,"allAccessibleTeamIds":[],"bodyPreview":"hs_meeting_body","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n hs_meeting_body\n </body>\n</html>"},"associations":{"contactIds":[40951],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"scheduledTasks":[],"metadata":{"startTime":1651568400000,"endTime":1651569300000,"title":"hs_meeting_title","body":"hs_meeting_body","source":"CRM_UI","preMeetingProspectReminders":[],"meetingOutcome":"SCHEDULED","attendeeOwnerIds":[]}},{"engagement":{"id":22816267052,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655735168813,"lastUpdated":1655735168813,"type":"NOTE","timestamp":1655735168813,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[44201],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22816280441,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655734743435,"lastUpdated":1655734743760,"ownerId":123,"type":"MEETING","timestamp":1655734743097,"allAccessibleTeamIds":[],"bodyPreview":"hs_meeting_body","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n hs_meeting_body\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"scheduledTasks":[],"metadata":{"startTime":1651568400000,"endTime":1651569300000,"title":"hs_meeting_title","body":"hs_meeting_body","source":"CRM_UI","preMeetingProspectReminders":[],"meetingOutcome":"SCHEDULED","attendeeOwnerIds":[]}},{"engagement":{"id":22816354372,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655735180429,"lastUpdated":1655735180836,"ownerId":123,"type":"MEETING","timestamp":1655735180126,"allAccessibleTeamIds":[],"bodyPreview":"hs_meeting_body","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n hs_meeting_body\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"scheduledTasks":[],"metadata":{"startTime":1651568400000,"endTime":1651569300000,"title":"hs_meeting_title","body":"hs_meeting_body","source":"CRM_UI","preMeetingProspectReminders":[],"meetingOutcome":"SCHEDULED","attendeeOwnerIds":[]}},{"engagement":{"id":22816401778,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655735166299,"lastUpdated":1655735166299,"type":"NOTE","timestamp":1655735166299,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[44101],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22816401818,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655735169988,"lastUpdated":1655735169988,"type":"NOTE","timestamp":1655735169988,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[44251],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22816422149,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655735175131,"lastUpdated":1655735175430,"type":"CALL","timestamp":1655735175131,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[44351],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":42,"body":"foo","title":"Call
-        with acdb7bec84517bda51039bcec0c2e9cc@hubspot.com"}},{"engagement":{"id":22816422234,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655735181435,"lastUpdated":1655735181852,"ownerId":123,"type":"MEETING","timestamp":1655735181163,"allAccessibleTeamIds":[],"bodyPreview":"hs_meeting_body","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n hs_meeting_body\n </body>\n</html>"},"associations":{"contactIds":[44401],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"scheduledTasks":[],"metadata":{"startTime":1651568400000,"endTime":1651569300000,"title":"hs_meeting_title","body":"hs_meeting_body","source":"CRM_UI","preMeetingProspectReminders":[],"meetingOutcome":"SCHEDULED","attendeeOwnerIds":[]}},{"engagement":{"id":22816466723,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655735171283,"lastUpdated":1655735171283,"type":"NOTE","timestamp":1655735171283,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[44251],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22816511405,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655735167212,"lastUpdated":1655735167212,"type":"NOTE","timestamp":1655735167212,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[44151],"companyIds":[8949602973],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22816602492,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655735165650,"lastUpdated":1655735165650,"type":"NOTE","timestamp":1655735165650,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22816721468,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655735170838,"lastUpdated":1655735170838,"type":"NOTE","timestamp":1655735170838,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[44251],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22816721482,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655735171991,"lastUpdated":1655735171991,"type":"NOTE","timestamp":1655735171991,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[44301],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22816740716,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655735174380,"lastUpdated":1655735174856,"type":"CALL","timestamp":1655735174380,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}},{"engagement":{"id":22849565491,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655817902188,"lastUpdated":1655817902188,"type":"NOTE","timestamp":1655817902188,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[48301],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22849565597,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655817908625,"lastUpdated":1655817909304,"type":"CALL","timestamp":1655817908625,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[48401],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":42,"body":"foo","title":"Call
-        with f1e68b5ab0f0b3bb30fccc0fdcc400f2@hubspot.com"}},{"engagement":{"id":22849726602,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655818145864,"lastUpdated":1655818145864,"type":"NOTE","timestamp":1655818145864,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[51601],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22849910155,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655818145164,"lastUpdated":1655818145164,"type":"NOTE","timestamp":1655818145164,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22851006780,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655817898663,"lastUpdated":1655817898663,"type":"NOTE","timestamp":1655817898663,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22851049242,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655817903440,"lastUpdated":1655817903440,"type":"NOTE","timestamp":1655817903440,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[47504],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":22851053613,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655818152147,"lastUpdated":1655818152147,"type":"NOTE","timestamp":1655818152147,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[51801],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}},{"engagement":{"id":22851053667,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655818154924,"lastUpdated":1655818155409,"type":"CALL","timestamp":1655818154924,"allAccessibleTeamIds":[],"bodyPreview":"Test
-        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
-        call","title":"Call with unknown contact"}}],"hasMore":true,"offset":22851053668}'
-  recorded_at: Wed, 22 Jun 2022 08:49:47 GMT
+        note"}},{"engagement":{"id":24386482980,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659970060222,"lastUpdated":1659970061005,"ownerId":156644386,"type":"MEETING","timestamp":1659970060056,"allAccessibleTeamIds":[],"bodyPreview":"hs_meeting_body","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n hs_meeting_body\n </body>\n</html>"},"associations":{"contactIds":[21151],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"scheduledTasks":[],"metadata":{"startTime":1651568400000,"endTime":1651569300000,"title":"hs_meeting_title","body":"hs_meeting_body","source":"CRM_UI","preMeetingProspectReminders":[],"meetingOutcome":"SCHEDULED","attendeeOwnerIds":[]}},{"engagement":{"id":24386537844,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969576410,"lastUpdated":1659969576410,"type":"NOTE","timestamp":1659969576410,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[18607],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":24386567604,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659970312469,"lastUpdated":1659970312469,"type":"NOTE","timestamp":1659970312469,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[24501],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":24386727091,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659970316321,"lastUpdated":1659970316321,"type":"NOTE","timestamp":1659970316321,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[24601],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}},{"engagement":{"id":24386769995,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659970313774,"lastUpdated":1659970313774,"type":"NOTE","timestamp":1659970313774,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[24551],"companyIds":[9337717418],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}}],"hasMore":false,"offset":24386769996}'
+  recorded_at: Mon, 08 Aug 2022 14:51:58 GMT
 - request:
     method: post
-    uri: https://api.hubapi.com/engagements/v1/engagements?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/contacts/v1/contact
     body:
       encoding: UTF-8
-      string: '{"engagement":{"type":"NOTE"},"associations":{"contactIds":[68851]},"metadata":{"body":"foo"}}'
+      string: '{"properties":[{"property":"email","value":"cced6924e69f51d6c94f302399ebb1bc@hubspot.com"}]}'
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -408,7 +127,152 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 22 Jun 2022 08:49:48 GMT
+      - Mon, 08 Aug 2022 14:51:59 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '456'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 737912bc5a5a3bd4-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 812978bf-f9b7-44a9-9707-5027fb2bf878
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248209'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '77'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2BF0524F34F9934BDCECEFF23541CEF1B9384A33C4000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3uixenN5lZaDK3Dq1lhyl1ZMX8Kh%2FJYyk3SjWey5whEFTkjfiTR5jjIHQoAfUZFLVDqHabJqdtl2k9y4UOU1c7vSb4J%2BMjAEPQT0PwSiprmspC0ExgmzH51Ca7rBqGbK99s1NRYw0Umr8wp%2B"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"vid":24651,"canonical-vid":24651,"merged-vids":[],"portal-id":<PORTAL_ID>,"is-contact":true,"properties":{"email":{"value":"cced6924e69f51d6c94f302399ebb1bc@hubspot.com","versions":[{"value":"cced6924e69f51d6c94f302399ebb1bc@hubspot.com","source-type":"INTEGRATION","source-id":"1024781","source-label":null,"updated-by-user-id":null,"timestamp":1659970318878,"selected":false}]}},"form-submissions":[],"list-memberships":[],"identity-profiles":[{"vid":24651,"is-deleted":false,"is-contact":false,"pointer-vid":0,"previous-vid":0,"linked-vids":[],"saved-at-timestamp":0,"deleted-changed-timestamp":0,"identities":[{"type":"EMAIL","value":"cced6924e69f51d6c94f302399ebb1bc@hubspot.com","timestamp":1659970318887,"is-primary":true,"source":"UNSPECIFIED"},{"type":"LEAD_GUID","value":"d4c3e857-fb07-4142-b6d8-8528d64ad4ab","timestamp":1659970318944,"source":"UNSPECIFIED"}]}],"merge-audits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:51:59 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/engagements/v1/engagements
+    body:
+      encoding: UTF-8
+      string: '{"engagement":{"type":"NOTE"},"associations":{"contactIds":[24651]},"metadata":{"body":"foo"}}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 08 Aug 2022 14:51:59 GMT
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '338'
+      Connection:
+      - keep-alive
+      Cf-Ray:
+      - 737912bf1efa99f7-CDG
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Vary:
+      - Accept-Encoding
+      Cf-Cache-Status:
+      - DYNAMIC
+      Access-Control-Allow-Credentials:
+      - 'false'
+      Expect-Ct:
+      - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+      X-Hubspot-Correlation-Id:
+      - 5ca3093d-ef24-4527-a6dd-70f850520ad2
+      X-Hubspot-Ratelimit-Daily:
+      - '250000'
+      X-Hubspot-Ratelimit-Daily-Remaining:
+      - '248208'
+      X-Hubspot-Ratelimit-Interval-Milliseconds:
+      - '10000'
+      X-Hubspot-Ratelimit-Max:
+      - '100'
+      X-Hubspot-Ratelimit-Remaining:
+      - '79'
+      X-Hubspot-Ratelimit-Secondly:
+      - '10'
+      X-Hubspot-Ratelimit-Secondly-Remaining:
+      - '7'
+      X-Trace:
+      - 2B0DFBBA82845132AF08F22995979BF52F69574867000000000000000000
+      Report-To:
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mHSxdOeXN%2B6%2FROQG8xjPXAO150U92N2B0RRQ1LPdz1iY%2B5QJtnGt89yM2T4OwrheF48yNelwFGVp5E33QSt3nxijCY95ADpq%2FUcXqPtQb8iRYsuLpmQ4C6tJ%2F2vxRbSvJ46ZQiO923rzDQqD"}],"group":"cf-nel","max_age":604800}'
+      Nel:
+      - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
+      Server:
+      - cloudflare
+      Alt-Svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+    body:
+      encoding: ASCII-8BIT
+      string: '{"associationCreateFailures":[],"engagement":{"id":24386567749,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659970319313,"lastUpdated":1659970319313,"type":"NOTE","timestamp":1659970319313,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[24651],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}}'
+  recorded_at: Mon, 08 Aug 2022 14:51:59 GMT
+- request:
+    method: post
+    uri: https://api.hubapi.com/engagements/v1/engagements
+    body:
+      encoding: UTF-8
+      string: '{"engagement":{"type":"NOTE"},"associations":{"contactIds":[24651]},"metadata":{"body":"foo"}}'
+    headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 08 Aug 2022 14:52:00 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
@@ -416,7 +280,7 @@ http_interactions:
       Connection:
       - keep-alive
       Cf-Ray:
-      - 71f3bb939b18edaf-CDG
+      - 737912c2a9320857-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -428,25 +292,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 45c776a4-f402-4d14-b8c9-71c0707e1326
+      - 18a98489-4fd4-468b-b0ba-2c50d8685448
       X-Hubspot-Ratelimit-Daily:
-      - '500000'
+      - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498274'
+      - '248207'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
-      - '150'
+      - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '122'
+      - '78'
       X-Hubspot-Ratelimit-Secondly:
-      - '15'
+      - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '12'
+      - '7'
       X-Trace:
-      - 2BE78548B5394D73237E9D92AD143C7BEDB8D7265E000000000000000000
+      - 2B0A1BAFA3BEAF76B5975C061F883C3B266A6B5550000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=htCyKFBnPtWjLMH1VtlEcHvCJ6wOLAWZTrJA0yJ36QT2lv72l46yunrndQ74qhwxjX7MjQ%2B9EUpSxbCaSlQFyi1DQL1VmfBpOGQYezaTK2YJ71JaKKOCEBW0Ugn%2F46EN7%2Fbi86IIkzsIzSYH"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=3No7SvI5roPDHB11OZrpXRJ%2F%2BO29KLxHXW2NusJZX33a8fZSfaTdIz%2BO7Qw50os2RUGloZKRDRWCC6Kklj%2BgCEEsPCSMR0D91A7nXiY7c5HsXpeO4tIVNW3wVosZlRgyFdTyHOVeF9Tud%2BOC"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -455,16 +319,18 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"associationCreateFailures":[],"engagement":{"id":22886113422,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655887788225,"lastUpdated":1655887788225,"type":"NOTE","timestamp":1655887788225,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[68851],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}}'
-  recorded_at: Wed, 22 Jun 2022 08:49:48 GMT
+      string: '{"associationCreateFailures":[],"engagement":{"id":24386465955,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659970319876,"lastUpdated":1659970319876,"type":"NOTE","timestamp":1659970319876,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[24651],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}}'
+  recorded_at: Mon, 08 Aug 2022 14:52:00 GMT
 - request:
     method: post
-    uri: https://api.hubapi.com/engagements/v1/engagements?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/engagements/v1/engagements
     body:
       encoding: UTF-8
-      string: '{"engagement":{"type":"NOTE"},"associations":{"contactIds":[68851]},"metadata":{"body":"foo"}}'
+      string: '{"engagement":{"type":"NOTE"},"associations":{"contactIds":[24651]},"metadata":{"body":"foo"}}'
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -479,15 +345,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 22 Jun 2022 08:49:48 GMT
+      - Mon, 08 Aug 2022 14:52:00 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '336'
+      - '338'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 71f3bb958f5099c0-CDG
+      - 737912c67bde39c9-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -499,25 +365,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 42ec672c-c5f6-48c3-ab10-8759da1d209d
+      - 4a2f8edb-cbba-44e0-8294-128a81426f5b
       X-Hubspot-Ratelimit-Daily:
-      - '500000'
+      - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498273'
+      - '248206'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
-      - '150'
+      - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '121'
+      - '79'
       X-Hubspot-Ratelimit-Secondly:
-      - '15'
+      - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '12'
+      - '7'
       X-Trace:
-      - 2B3A2CE0C3DA4AF406013DE9F368FA50B27481ED37000000000000000000
+      - 2B6B5453621EC297B5CE11BF08ED5C64F45AC45607000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=jgYvLzLH7gGXq5Dx%2BdJJrgfaiHmWE5ayxC6taKHJYjGavH5y0GbTVbtKBUnHXhCI41GYMKAWKWnirlFc0zB3LWD4sUnwDix3TUd1YIoOpS9z82SvPBxsJ1OtMWY5y3acgce4iXV70fx1bCGS"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NzsEuaplH0waimvRAAfcXy%2B5JumZ2pBNxT0sjSLCTp4oMDiq%2Fnrb%2FZeyA6cIT54jKn6KsmYyZiVS7S%2BQ%2F6hhk0zP1cY68kzwYMD2d5zI2zMgHE8UZrn42%2BnQxmfm%2FKHuKBP6NLZrwUHOcVXE"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -526,16 +392,18 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"associationCreateFailures":[],"engagement":{"id":22882303818,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655887788485,"lastUpdated":1655887788485,"type":"NOTE","timestamp":1655887788485,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[68851],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}}'
-  recorded_at: Wed, 22 Jun 2022 08:49:48 GMT
+      string: '{"associationCreateFailures":[],"engagement":{"id":24384583239,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659970320510,"lastUpdated":1659970320510,"type":"NOTE","timestamp":1659970320510,"allAccessibleTeamIds":[],"bodyPreview":"foo","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n foo\n </body>\n</html>"},"associations":{"contactIds":[24651],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"foo"}}'
+  recorded_at: Mon, 08 Aug 2022 14:52:00 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/engagements/v1/engagements/paged?hapikey=<HAPI_KEY>&limit=2
+    uri: https://api.hubapi.com/engagements/v1/engagements/paged?limit=2
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -548,15 +416,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 22 Jun 2022 08:49:49 GMT
+      - Mon, 08 Aug 2022 14:52:01 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '384'
+      - '451'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 71f3bb972c407a6b-CDG
+      - 737912ca591f4013-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -568,25 +436,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 27fce298-cff6-4c6c-8271-131de21d1fd2
+      - 67f498e5-5087-42cb-8e42-9295cc4b8726
       X-Hubspot-Ratelimit-Daily:
-      - '500000'
+      - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498272'
+      - '248205'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
-      - '150'
+      - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '120'
+      - '81'
       X-Hubspot-Ratelimit-Secondly:
-      - '15'
+      - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '12'
+      - '8'
       X-Trace:
-      - 2B8EEB14C59740FC9DD7F8CC5DC33CF7239077235B000000000000000000
+      - 2B7764AD5E0B4E342B47E12A8C6F15D394C65999CF000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=8kdS%2BBJ7Q66%2FcR22NXyHN8hneRrRUEBsA%2BjUjx3n%2BOAwHpJIc2EFevnRRUGN8Sn3PM3NSmOme2xdIJPIjzwjc6BcbTQAhbSQ3Kxmva4PDUIKb76yDfh19iOWk0vX%2B7BKOduTnQQrqkr7TINS"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FFTTq3hzTB%2FN%2BcTG%2BOHZ16ln9%2BZNeIoCXB7xprccM3toSB6cbVWCAizKL%2FH3AUklEgsAEWGsWnze%2FhqSQcWSsDT%2FwN2wR5pYSBWFgEzHgNsE2mJwEj4Wq%2F56ydEeuvzVOQl%2FtX3ggxZxR7Tc"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -595,10 +463,12 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"results":[{"engagement":{"id":22753632614,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655457111070,"lastUpdated":1655457111070,"type":"NOTE","timestamp":1655457111070,"allAccessibleTeamIds":[],"bodyPreview":"Test
+      string: '{"results":[{"engagement":{"id":24384157319,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969575232,"lastUpdated":1659969575232,"type":"NOTE","timestamp":1659969575232,"allAccessibleTeamIds":[],"bodyPreview":"Test
         note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
         <head></head>\n <body>\n Test note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"Test
-        note"}},{"engagement":{"id":22753642387,"portalId":<PORTAL_ID>,"active":true,"createdAt":1655457112830,"lastUpdated":1655457112830,"type":"NOTE","timestamp":1655457112830,"allAccessibleTeamIds":[],"bodyPreview":"note","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
-        <head></head>\n <body>\n note\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"body":"note"}}],"hasMore":true,"offset":22753642388}'
-  recorded_at: Wed, 22 Jun 2022 08:49:48 GMT
-recorded_with: VCR 6.1.0
+        note"}},{"engagement":{"id":24384157564,"portalId":<PORTAL_ID>,"active":true,"createdAt":1659969589983,"lastUpdated":1659969590354,"type":"CALL","timestamp":1659969589983,"allAccessibleTeamIds":[],"bodyPreview":"Test
+        call","queueMembershipIds":[],"bodyPreviewIsTruncated":false,"bodyPreviewHtml":"<html>\n
+        <head></head>\n <body>\n Test call\n </body>\n</html>"},"associations":{"contactIds":[],"companyIds":[],"dealIds":[],"ownerIds":[],"workflowIds":[],"ticketIds":[],"contentIds":[],"quoteIds":[]},"attachments":[],"metadata":{"status":"COMPLETED","durationMilliseconds":0,"body":"Test
+        call","title":"Call with unknown contact"}}],"hasMore":true,"offset":24384157565}'
+  recorded_at: Mon, 08 Aug 2022 14:52:01 GMT
+recorded_with: VCR 6.0.0

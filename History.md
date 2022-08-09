@@ -1,3 +1,9 @@
+## Next release
+
+  * API keys (`hapikey`) are deprecated. Please use `access_token`s. #7
+
+  * Breaking change: removed previously deprecated methods `Hubspot::Utils.dump_properties` and `Hubspot::Utils.restore_properties`
+
 ## 0.9.0
 
   * Governance update: this gem is now maintained by the team over at @captaincontrat + @Intrepidd from @ecotable

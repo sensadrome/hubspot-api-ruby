@@ -2,11 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.hubapi.com/companies/v2/companies/?hapikey=<HAPI_KEY>
+    uri: https://api.hubapi.com/companies/v2/companies/
     body:
       encoding: UTF-8
-      string: '{"properties":[{"name":"name","value":"Thompson Inc"},{"name":"domain","value":"gleason-erdman.name"}]}'
+      string: '{"properties":[{"name":"name","value":"Ritchie, Douglas and Wuckert"},{"name":"domain","value":"hegmann-quigley.name"}]}'
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -21,15 +23,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 22 Jun 2022 08:47:46 GMT
+      - Mon, 08 Aug 2022 14:49:25 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '396'
+      - '442'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 71f3b8985bdfcd93-CDG
+      - 73790f003b9a3a93-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -41,25 +43,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - fda31033-ca0e-46e4-b2d3-494390f5f5e7
+      - 8fb3bdea-a487-46a2-adf6-d96e78b201c3
       X-Hubspot-Ratelimit-Daily:
-      - '500000'
+      - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498601'
+      - '248530'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
-      - '150'
+      - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '118'
+      - '74'
       X-Hubspot-Ratelimit-Secondly:
-      - '15'
+      - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
+      - '7'
       X-Trace:
-      - 2BE99EED0048B9D53CFC1E80593A087D3304031F3A000000000000000000
+      - 2BF9BD1C69677E79FD91DAED7C2E82CA15428D88A9000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lr5mfZ9RQu3W8tBxlL5b4XLwhH4pTMI3hNv%2F7BLjhGa%2FJCc%2BfMrQYJThs%2BYX0oQj%2FKTyMbvCakreq%2B1aLm2GKhhQ93U0rS9NQVF2voh4BqZTABg%2FPvKWjMFePQRP4pP5%2BCPJgS8d56q03rsY"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NJRx6hLgTTWpmvfv2sryamB6Uz1rVcfIpjagYoNJZ6UYRBDYAZGggbkobk4LB1rVylWiasPntRapUoH4sMHEW7kdA%2Br%2BuPPru3pIehYHsty6mNQwmiW4XBGDo3pjofFgC0OohE8M26flnYZ5"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -68,17 +70,19 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"portalId":<PORTAL_ID>,"companyId":8963368575,"isDeleted":false,"properties":{"website":{"value":"gleason-erdman.name","timestamp":1655887666088,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"gleason-erdman.name","timestamp":1655887666088,"source":"CALCULATED","sourceVid":[],"requestId":"fda31033-ca0e-46e4-b2d3-494390f5f5e7"}]},"hs_lastmodifieddate":{"value":"1655887666088","timestamp":1655887666088,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1655887666088","timestamp":1655887666088,"source":"CALCULATED","sourceVid":[],"requestId":"fda31033-ca0e-46e4-b2d3-494390f5f5e7"}]},"domain":{"value":"gleason-erdman.name","timestamp":1655887666088,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"domain","value":"gleason-erdman.name","timestamp":1655887666088,"source":"API","sourceVid":[],"requestId":"fda31033-ca0e-46e4-b2d3-494390f5f5e7"}]},"name":{"value":"Thompson
-        Inc","timestamp":1655887666088,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"name","value":"Thompson
-        Inc","timestamp":1655887666088,"source":"API","sourceVid":[],"requestId":"fda31033-ca0e-46e4-b2d3-494390f5f5e7"}]},"hs_object_id":{"value":"8963368575","timestamp":1655887666088,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"8963368575","timestamp":1655887666088,"source":"API","sourceVid":[],"requestId":"fda31033-ca0e-46e4-b2d3-494390f5f5e7"}]},"createdate":{"value":"1655887666088","timestamp":1655887666088,"source":"API","sourceId":null,"updatedByUserId":null,"versions":[{"name":"createdate","value":"1655887666088","timestamp":1655887666088,"source":"API","sourceVid":[],"requestId":"fda31033-ca0e-46e4-b2d3-494390f5f5e7"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
-  recorded_at: Wed, 22 Jun 2022 08:47:46 GMT
+      string: '{"portalId":<PORTAL_ID>,"companyId":9337669415,"isDeleted":false,"properties":{"website":{"value":"hegmann-quigley.name","timestamp":1659970165880,"source":"CALCULATED","sourceId":null,"updatedByUserId":null,"versions":[{"name":"website","value":"hegmann-quigley.name","timestamp":1659970165880,"source":"CALCULATED","sourceVid":[],"requestId":"8fb3bdea-a487-46a2-adf6-d96e78b201c3"}]},"hs_lastmodifieddate":{"value":"1659970165880","timestamp":1659970165880,"source":"CALCULATED","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_lastmodifieddate","value":"1659970165880","timestamp":1659970165880,"sourceId":"1024781","source":"CALCULATED","sourceVid":[],"requestId":"8fb3bdea-a487-46a2-adf6-d96e78b201c3"}]},"domain":{"value":"hegmann-quigley.name","timestamp":1659970165880,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"domain","value":"hegmann-quigley.name","timestamp":1659970165880,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8fb3bdea-a487-46a2-adf6-d96e78b201c3"}]},"name":{"value":"Ritchie,
+        Douglas and Wuckert","timestamp":1659970165880,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"name","value":"Ritchie,
+        Douglas and Wuckert","timestamp":1659970165880,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8fb3bdea-a487-46a2-adf6-d96e78b201c3"}]},"hs_object_id":{"value":"9337669415","timestamp":1659970165880,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"hs_object_id","value":"9337669415","timestamp":1659970165880,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8fb3bdea-a487-46a2-adf6-d96e78b201c3"}]},"createdate":{"value":"1659970165880","timestamp":1659970165880,"source":"INTEGRATION","sourceId":"1024781","updatedByUserId":null,"versions":[{"name":"createdate","value":"1659970165880","timestamp":1659970165880,"sourceId":"1024781","source":"INTEGRATION","sourceVid":[],"requestId":"8fb3bdea-a487-46a2-adf6-d96e78b201c3"}]}},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:26 GMT
 - request:
     method: get
-    uri: https://api.hubapi.com/companies/v2/companies/paged?hapikey=<HAPI_KEY>&limit=25&offset=8963368575
+    uri: https://api.hubapi.com/companies/v2/companies/paged?limit=25&offset=9337669415
     body:
       encoding: US-ASCII
       string: ''
     headers:
+      Authorization:
+      - Bearer <ACCESS_TOKEN>
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -91,15 +95,15 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Wed, 22 Jun 2022 08:47:46 GMT
+      - Mon, 08 Aug 2022 14:49:26 GMT
       Content-Type:
       - application/json;charset=utf-8
       Content-Length:
-      - '288'
+      - '297'
       Connection:
       - keep-alive
       Cf-Ray:
-      - 71f3b899d889999f-CDG
+      - 73790f02bda4ee71-CDG
       Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Vary:
@@ -111,25 +115,25 @@ http_interactions:
       Expect-Ct:
       - max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
       X-Hubspot-Correlation-Id:
-      - 977b880b-aec8-49b3-9505-6d6703d985e4
+      - 7a36e276-a50c-4fe6-9edb-a815fbf19671
       X-Hubspot-Ratelimit-Daily:
-      - '500000'
+      - '250000'
       X-Hubspot-Ratelimit-Daily-Remaining:
-      - '498600'
+      - '248529'
       X-Hubspot-Ratelimit-Interval-Milliseconds:
       - '10000'
       X-Hubspot-Ratelimit-Max:
-      - '150'
+      - '100'
       X-Hubspot-Ratelimit-Remaining:
-      - '117'
+      - '74'
       X-Hubspot-Ratelimit-Secondly:
-      - '15'
+      - '10'
       X-Hubspot-Ratelimit-Secondly-Remaining:
-      - '11'
+      - '7'
       X-Trace:
-      - 2BF90C0AFA44BCE6EE3B821FC75A2BB4C43C72BEA9000000000000000000
+      - 2B3C42F31C38329499D2050029513D7AECB20BCEEE000000000000000000
       Report-To:
-      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fFeelRuuCqFWlcHXxYehDsDiWk5SOZ5Ad3JQFoPbNlybu1%2FAkSRMNL5Oa5iCuvBf2ExqsN6HJuKw3gnbwfpwc1RLywDJvYKDkvzmQjglh86ymCt380ZxFafDpr2aphHSv9XtL472sHN1jRPR"}],"group":"cf-nel","max_age":604800}'
+      - '{"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=rSO6Ks94JZYeuesTHOeY%2BI884uc5V9ZYG7O%2BK%2BSDvGUteYS%2FPDqbx9%2FFg5e5Coqdu%2FOH34pOfal06nviexk7Fp5DjOjgJKJorVeDfovO0lUUANiT0etvX0uVmBabB94stjz7hqmSBKfsHmCz"}],"group":"cf-nel","max_age":604800}'
       Nel:
       - '{"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}'
       Server:
@@ -138,6 +142,6 @@ http_interactions:
       - h3=":443"; ma=86400, h3-29=":443"; ma=86400
     body:
       encoding: ASCII-8BIT
-      string: '{"has-more":true,"offset":8963406768,"companies":[{"portalId":<PORTAL_ID>,"companyId":8963368575,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963371277,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963371279,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963372621,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963372671,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963372712,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963377221,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963377225,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963380025,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963380026,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963383718,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963384680,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963385212,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963389363,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963389567,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963390976,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963394488,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963394580,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963396156,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963400316,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963401571,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963401599,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963405358,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963405360,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":8963406767,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}]}'
-  recorded_at: Wed, 22 Jun 2022 08:47:46 GMT
-recorded_with: VCR 6.1.0
+      string: '{"has-more":true,"offset":9338040443,"companies":[{"portalId":<PORTAL_ID>,"companyId":9337669415,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337673546,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337673547,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337678383,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337678386,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337681062,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337688582,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337696351,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337696570,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337700655,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337706421,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337706425,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337706499,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337713252,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337717121,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337724803,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337733207,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337733248,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337735189,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337739668,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337739700,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337743886,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337743917,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9337748483,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]},{"portalId":<PORTAL_ID>,"companyId":9338040442,"isDeleted":false,"properties":{},"additionalDomains":[],"stateChanges":[],"mergeAudits":[]}]}'
+  recorded_at: Mon, 08 Aug 2022 14:49:26 GMT
+recorded_with: VCR 6.0.0
