@@ -1,3 +1,11 @@
+## 0.12.0
+
+  * Added Resource#properties reader (thanks @ur5us!) #10
+
+## 0.11.0
+
+  * Get a single property and a single property group (thanks @sammyd!) #9
+
 ## 0.10.0
 
   * API keys (`hapikey`) are deprecated. Please use `access_token`s. #7
