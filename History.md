@@ -1,3 +1,7 @@
+## 0.14.0
+
+  * Added `Meeting#all`, `Meeting#find` and `Meeting#find_by_contact`
+
 ## 0.13.0
 
   * BREAKING: requires ruby 2.7+, as we're not testing against olders rubies. #11 + #12
