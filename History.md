@@ -1,6 +1,10 @@
-## 0.14.0
+## 0.15.0
 
-  * Added `Meeting#all`, `Meeting#find` and `Meeting#find_by_contact`
+  * Added the possiblity to sort and add custom filters to `Meeting#find_by_contact`. #16
+  * BREAKING CHANGE: `Meeting#find_by_contact` now returns a hash `{ meetings: [...], after: after }` instead of directly returning the meetings array.
+
+## 0.14.0
+  * Added `Meeting#all`, `Meeting#find` and `Meeting#find_by_contact`. #14
 
 ## 0.13.0
 
