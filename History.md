@@ -1,3 +1,7 @@
+## 0.16.0
+
+  * Added the possibility to add custom properties to `Meeting#find` and `Meeting#find_by_contact`. #17
+
 ## 0.15.0
 
   * Added the possiblity to sort and add custom filters to `Meeting#find_by_contact`. #16
