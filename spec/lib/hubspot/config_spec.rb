@@ -51,13 +51,15 @@ describe Hubspot::Config do
     context 'hapikey deprecation' do
       it "sets the hapikey config and sends a deprecation warning" do
         previous, $stderr = $stderr, StringIO.new
-
-        hapikey = 'demo'
-        config = Hubspot::Config.configure(hapikey: hapikey)
-        expect(config.hapikey).to eq(hapikey)
-        expect($stderr.string).to include 'please use access_token instead.'
-      ensure
-        $stderr = previous
+        
+        begin
+          hapikey = 'demo'
+          config = Hubspot::Config.configure(hapikey: hapikey)
+          expect(config.hapikey).to eq(hapikey)
+          expect($stderr.string).to include 'please use access_token instead.'
+        ensure
+          $stderr = previous
+        end
       end
     end
   end

@@ -1,3 +1,4 @@
+require_relative './patches.rb'
 require 'active_support'
 require 'active_support/core_ext'
 require 'httparty'
